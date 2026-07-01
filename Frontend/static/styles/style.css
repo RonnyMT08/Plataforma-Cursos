@@ -3,7 +3,9 @@ COLORES GLOBALES
 ***************************/
 :root 
 {
-    --primary-color:rgba(0, 128, 0, 0.6); 
+    --primary-color: rgb(255 255 255 / 46%);
+
+    --font-color: rgb(16 8 113);
 }
 
 body {
@@ -15,24 +17,25 @@ body {
 BARRA DE NAVEGACION
 ****************************/
 nav {
-    background-color: var(--primary-color);
     display: flex;
+    position: fixed;
+    justify-content: space-around;
     flex-direction: column;
-    width: 80%;
-    margin: 1rem auto;
-    border-radius: 1rem;
-
+    width: 100%;
 }
 
 .nav_container{
+    background-color: var(--primary-color);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
     gap: 1rem;
     padding: 0rem 2rem;
+    margin: 2rem 3rem;
+    border-radius: 2rem;
 }
 
 .nav_div {
-    padding: 0.2rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -59,28 +62,37 @@ nav {
     min-width: 7rem;
     position: absolute;
     padding: 0.5rem;
-    margin: 3px -1px;
+    margin: 16px 5px;
     border-radius: 0rem 0rem 0.5rem 0.5rem;
     gap: 0.5rem;
 }
 .nav_div_a_opciones a:hover{
-    border-bottom: 1px solid white;
-    color: white;
+    border-bottom: 1px solid var(--font-color);
+    color: var(--font-color);
 }
 
 .nav_div_btn:hover {
-    border-bottom: 1px solid white;
-    color: white;
+    border-bottom: 1px solid var(--font-color);
+    color: var(--font-color);
 }
 
 .nav_div_a:hover {
-    border-bottom: 1px solid white;
-    color: white;
+    border-bottom: 1px solid var(--font-color);
+    color: var(--font-color);
 }
 
 .nav_div:hover .nav_div_a_opciones {
     display: flex;
 }
 
+/****************************
+BARRA DE NAVEGACION
+****************************/
+
+.body_container_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
 
 
