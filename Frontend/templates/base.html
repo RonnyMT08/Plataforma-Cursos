@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo_bp2.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -12,7 +13,7 @@
 <body>
     <nav>
         <div class="nav_logo">
-            <a href=""><img src="{{ url_for('static', filename='images/fondo_inicio.jpg')}}" alt=""></a>
+            <a href=""><img src="{{ url_for('static', filename='images/logo_bp2.png')}}" alt=""></a>
         </div>
         <div class="nav_botones">
             <div class="nav_div">
@@ -35,9 +36,6 @@
             <div class="nav_div">
                 <a class="nav_div_a" href="">Mas</a>
             </div>
-        </div>
-        <div class="nav_sesion">
-            <a href="">Iniciar sesion</a>
         </div>
     </nav>
     {% block content %}

@@ -18,7 +18,7 @@ BARRA DE NAVEGACION
 nav {
     position: fixed;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 4fr;
     justify-content: space-around;
     flex-direction: column;
     width: 100%;
@@ -100,20 +100,6 @@ nav {
     display: flex;
 }
 
-
-
-.nav_sesion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.nav_sesion a{
-    background-color: rgb(28, 55, 145);
-    padding: 1rem;
-    text-decoration: none;
-    color: aliceblue;
-    border-radius: 1rem;
-}
 
 /****************************
 INDEX
