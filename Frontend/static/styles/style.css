@@ -1,0 +1,86 @@
+/**************************
+COLORES GLOBALES
+***************************/
+:root 
+{
+    --primary-color:rgba(0, 128, 0, 0.6); 
+}
+
+body {
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/****************************
+BARRA DE NAVEGACION
+****************************/
+nav {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+
+}
+
+.nav_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    gap: 1rem;
+    padding: 0rem 2rem;
+}
+
+.nav_div {
+    padding: 0.2rem;
+    text-align: center;
+}
+
+.nav_div_btn {
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid transparent;
+    font: inherit;
+    appearance: none;
+}
+
+.nav_div_a {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    width: fit-content;
+    color: inherit;
+}
+
+.nav_div_a_opciones {
+    background-color: var(--primary-color);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    min-width: 7rem;
+    position: absolute;
+    padding: 0.5rem;
+    margin: 3px -1px;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    gap: 0.5rem;
+}
+.nav_div_a_opciones a:hover{
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.nav_div_btn:hover {
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.nav_div_a:hover {
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.nav_div:hover .nav_div_a_opciones {
+    display: flex;
+}
+
+
+
