@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     <nav>
-        <div class="nav_container">
+        <div class="nav_logo">
+            <a href=""><img src="{{ url_for('static', filename='images/fondo_inicio.jpg')}}" alt=""></a>
+        </div>
+        <div class="nav_botones">
             <div class="nav_div">
                 <a class="nav_div_a" href="">Inicio</a>
             </div>
@@ -21,15 +26,18 @@
                     <a class="nav_div_a" href="">Fisica</a>
                 </div>
             </div>
-            <div class="nav_div"">
+            <div class="nav_div">
                 <a class="nav_div_a" href="">Registrarse</a>
             </div>
-            <div class="nav_div"">
+            <div class="nav_div">
                 <a class="nav_div_a" href="">Contactanos</a>
             </div>
-            <div class="nav_div"">
+            <div class="nav_div">
                 <a class="nav_div_a" href="">Mas</a>
             </div>
+        </div>
+        <div class="nav_sesion">
+            <a href="">Iniciar sesion</a>
         </div>
     </nav>
     {% block content %}

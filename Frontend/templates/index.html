@@ -3,8 +3,16 @@
 {% block title %}Index{% endblock %}
 
 {% block content %}
-    <div class="body_container_img">
-        <img src="{{ url_for('static', filename='images/fondo_inicio.jpg')}}" alt="fondo_inicio">
+    <div class="index_container_img">
+        <div class="container_img">
+            <span>Biblioteca del Programador</span>
+            <p>Contenidos completos, aprendizaje rapido</p>
+            <div class="conteiner_resenias">
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-envelope-at"></i></a>
+                <a href=""><i class="bi bi-whatsapp"></i></a>
+                <a href=""><i class="bi bi-github"></i></a>
+            </div>
+        </div>
     </div>
-    <p> Hola mundo </p>
 {% endblock %}
