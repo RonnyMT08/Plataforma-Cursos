@@ -21,19 +21,18 @@
 
     <div class="curso_info_div">
         <h3>Hola Mundo en C</h3>
-
-        <p>Todo programa de inicio en su ejecusión con un main, esto significa que en alguna parte debe tener un "main" como parte principal del programa. </p>
-        <p>Al inicio incluimos un "#include ...", indica al compilador que debe incluir informacion acerca la biblioteca de C entrada/salida.</p>
-        <p>En este caso la funcion "prinft" tiene el argumento "hola mundo\n" el cual es el texto a mostrar, la secuencia "\n" representa el caracter de la nueva linea.</p>
-        <p>La forma de ejecutar un programa en C depende el sistema que se esté utilizando, los más comunes son ".c", Ejemplo hola.c</p>
+        <p>Todo programa da inicio en su ejecución con un "main" como parte principal del programa. </p>
+        <p>Al inicio incluimos un "#include ...", indica al compilador que debe incluir informacion acerca de la biblioteca de entrada y salida en C.</p>
+        <p>En este caso la funcion "prinft" tiene el argumento "hola mundo\n" el cual es el texto que se llegara a mostrar, la secuencia "\n" representa el caracter de la una nueva linea.</p>
+        <p>La forma de ejecutar un programa en C depende el sistema que se esté utilizando, una de las formas mas comunes es ".c", Ejemplo con un programa llamado hola.c</p>
         <p>Para la compilación del codigo "gcc hola.c", y se puede ejecutar con "./hola".</p>   
-        
-        <pre><code>
+        <code><pre>
         #include < stdio.h>
-        main (){
+        int main (){
             printf("Hola mundo\n");
+            return 0;
         }
-        </code></pre>
+        </pre></code>
     </div>
     
 
@@ -52,10 +51,10 @@
         <p>Tambien se cuenta con varicos tipos de datos básicos:</p>
         <code>
             <pre>
-                char caracter 1byte
-                short entero corto 
-                long entero largo
-                double punto flotante de doble presición
+            char caracter 1byte
+            short entero corto 
+            long entero largo
+            double punto flotante de doble presición
             </pre>
         </code>
         <p>Algunas formas de mostrart número son:</p>
@@ -76,10 +75,10 @@
         <p>Es una mala practica poner "númeross mágicos" como en 25 directamente en el programa, ya que se debe proporcionar información sobre el dato. una linea "#define" esa como se define un nombre simbólico o constante simbólica.</p>
         <code>
             <pre>
-                #include < stdio.h>
-                #define EDAD 25
-                #define MES 8
-                #define DIA 21
+            #include < stdio.h>
+            #define EDAD 25
+            #define MES 8
+            #define DIA 21
             </pre>
         </code>
     </div>
@@ -90,26 +89,26 @@
         <p>Una función tiene la forma de: "tipo-de-retorno nombre-de-la-función (parametros) { cuerpo }" </p>
         <code>
             <pre>
-                /*
-                Precodciones: exponente >= 0
-                Postcondiciones: eleva la base a la n-ésima potencia.
-                */
-                int numero_cuadrado(int base, int exponente){
-                    int p;
+            /*
+            Precodciones: exponente >= 0
+            Postcondiciones: eleva la base a la n-ésima potencia.
+            */
+            int numero_cuadrado(int base, int exponente){
+                int p;
 
-                    for (p = 1; n > 0; --n){
-                        p = p * base;
-                    }
-                    return p;
+                for (p = 1; n > 0; --n){
+                    p = p * base;
                 }
+                return p;
+            }
             </pre>
         </code>
         <p>Posteriormente lo podesmos llamar o hacer uso del mismo dentro del main</p>
         <code>
             <pre>
-                int main(){
-                    int numero_cuadrado(int, int);
-                }
+            int main(){
+                int numero_cuadrado(int, int);
+            }
             </pre>
         </code>
     </div>
@@ -169,64 +168,64 @@
         <p>if-else, se una para decisiones, la sintaxis es:</p>
         <code>
             <pre>
-                if (expresion){
-                    proposición1;
-                }
-                else{
-                    proposición2;
-                }
+            if (expresion){
+                proposición1;
+            }
+            else{
+                proposición2;
+            }
             </pre>
         </code>
         <p>Else-if: Esta secuencua de proposiciones if es la forma más general de escribir una desición mútiple, la expresión se evalua en orden, de acuerdo a la verdadera.</p>
         <code>
             <pre>
-                if (expresión){
-                    proposición;
-                } else if (expresión){
-                    proposición;
-                } ... {
-                    ...;
-                } else {
-                    proposición;
-                }
+            if (expresión){
+                proposición;
+            } else if (expresión){
+                proposición;
+            } ... {
+                ...;
+            } else {
+                proposición;
+            }
             </pre>
         </code>
         <p>Switch: Es una decisión multiple que prueba si una expresión coincide con uno de un número de valores constantes enteros. Cada case se etiqueta con uno o más valores constantes enteros o expresiones constantes enteras</p>
         <code>
             <pre>
-                switch (expresión){
-                    case exp-const: proposiciones
-                        break;
-                    case exp-const: proposiciones
-                        break;
-                    default: proposiciones
-                        break;
-                }
+            switch (expresión){
+                case exp-const: proposiciones
+                    break;
+                case exp-const: proposiciones
+                    break;
+                default: proposiciones
+                    break;
+            }
             </pre>
         </code>
         <p>Ciclos-while: si es diferente de cerp, se ejecuta la proposición y se reevalúa la expresión. Este ciclo continua hasta que la expresión se hace cero. La estructura formal del while es while:</p>
         <code>
             <pre>
-                while (expresión){
-                    prpposición
-                }
+            while (expresión){
+                prpposición
+            }
             </pre>
         </code>
         <p>Ciclo-for: Es la forma caracteristca de procesar los primero n elementos de un arreglo en C, </p>
         <code>
             <pre>
-                for (i=0; i < n; i++){
-                    proposiciones
-                }
+            for (i=0; i < n; i++){
+                proposiciones
+            }
             </pre>
         </code>
 
         <p>Ciclo do-while<: prueba al final después de realizar cada paso a través del cuerpo del ciclo, el cual se ejecuta siempre por lo menos una vez./p>
         <code>
             <pre>
-                do 
-                    proposicion
-                while (expresion);
+            do 
+                proposicion
+            while (expresion);
             </pre>
         </code>
         <p>Break y continue: una forma de abandornar el ciclo que no sea por el inicio o final. La proposición continue provoca que inicie la siguiente itaración del ciclo for, while o do que la contiene (no valido para switch).</p>
@@ -242,34 +241,34 @@
         <p>Dado un arreglo de celdas de memoria numeradas o direccionadas consecutivamente que se puede manipular individualmente o en grupos contiguos. Ahora con p un puntero que apunta a un chart.con el operador unario "&" se da la dirección de un objeto, de modo que la proposición.</p>
         <code>
             <pre>
-                p = &c;
+            p = &c;
             </pre>
         </code>
         <p>Asigna la dirección de c a la variable p, y se dice que p apunta a "c". El operador & sólo aplica a objetos que están en memoria. EL operador unario "*" es el operador de indireccion p desreferencia, cuando se aplica un apuntador, da acceso al objeto al que señala al apuntador.</p>
         <code>
             <pre>
-                int x = 1, y = 2, z[10];
-                int *ip; /*ip es un puntero a int */
+            int x = 1, y = 2, z[10];
+            int *ip; /*ip es un puntero a int */
 
-                ip = &x; /*ip ahora apunta a x*/
-                y = &x /*y es ahora 1*/
-                *ip = 0; /*c es ahora 0*/
-                ip = &z[0]; /*ip ahora apunta a z[0]*/
+            ip = &x; /*ip ahora apunta a x*/
+            y = &x /*y es ahora 1*/
+            *ip = 0; /*c es ahora 0*/
+            ip = &z[0]; /*ip ahora apunta a z[0]*/
             </pre>
         </code>
         <p>si ip apunra al entero x, entonces *ip puede presentarse en cualquier contexto donde x pueda hacerlo, asi que</p>
         <pre>
             <code>
-                *ip = *ip +10
+            *ip = *ip +10
             </code>
         </pre>
         <p>Los operadores narios * y & se ligan más estrechamente que los operadores arimeticos, asi.</p>
         <pre>
             <code>
-                y = *ip + 1 /*toma aquello que apunte a ip, le agrega 1 y asigna el resultado a y*/
-                *ip += 1 /*incrementa en uno aquello que ip apunta*/
-                ++ *ip
-                (*ip)++
+            y = *ip + 1 /*toma aquello que apunte a ip, le agrega 1 y asigna el resultado a y*/
+            *ip += 1 /*incrementa en uno aquello que ip apunta*/
+            ++ *ip
+            (*ip)++
             </code>
         </pre>
         <p>por último, puesto que los apuntadores son variables, se puede emplear sin desreferaciaminento, por ejemplo, si iq es otro apuntador a int, iq = ip, copia el contenido de ip en iq; asi, hace que iq apunte a los que ip está apuntando.</p>
@@ -280,31 +279,31 @@
         <p>Por defecto C pasa los argumentos de funcones por valor, no existe una forma directa para que la función que se invoca altere una variable de la función que la llama. dado que una función que se pasa solo intercabia copias. Ejemplo</p>
         <code>
             <pre>
-                void swap (innt x, int y){
-                    int temp;
-                    temp = x;
-                    x = y;
-                    y = temp;
-                }
-                int main() {
-                    swap (a, b);
-                    return 0;
-                }
+            void swap (innt x, int y){
+                int temp;
+                temp = x;
+                x = y;
+                y = temp;
+            }
+            int main() {
+                swap (a, b);
+                return 0;
+            }
             </pre>
         </code>
         <p>La forma de obtener los resutados que se desean es qe el programa invocador pase por punteros los valores que se cambiarán, Puesto que el operador & produce la dirección de una variable, &a es un apuntador a "a", Ejemplo.</p>
         <code>
             <pre>
-                void swap(int *px, int *py){
-                    int temp;
-                    temp = *px;
-                    *px = *py;
-                    *py = temp;
-                }
-                int main() {
-                    swap (&a, &b);
-                    return 0;
-                }
+            void swap(int *px, int *py){
+                int temp;
+                temp = *px;
+                *px = *py;
+                *py = temp;
+            }
+            int main() {
+                swap (&a, &b);
+                return 0;
+            }
             </pre>
         </code>
     </div>
@@ -314,15 +313,15 @@
         <p>Cualquier operación entre apuntadores y arreglos puede lograrse por indexación, La declaración es int a[10];, define un arreglo a de tamaño 10, esto es, un bloque de 10 objetos consecusitoc llamadso a[0], a[1],...,a[9]. La notación a[i] se refiere al i-ésimo elemento del arreglo. si pa es un puntero a un entero, declarado como</p>
         <code>
             <pre>
-                int *pa; 
-                pa = &a[0]; /*Es la asignación, pa ahora apunta al elemento cero de a, se dice que pa contiene la dirección de a[0]*/
+            int *pa; 
+            pa = &a[0]; /*Es la asignación, pa ahora apunta al elemento cero de a, se dice que pa contiene la dirección de a[0]*/
             </pre>
         </code>
         <p>Ahora la asignación x = *pa; copiará el contenido de a[0] en x. Si pa apunta a un elemento en particular de un arreglo, entonces por definición pa + 1 apunta al siguiente element, pa +I apunta i elementos después de pa, y pa-i apunta i elementos antes.</p>
         <p>Así pa apunta a a[0], *(pa + 1) se refiere al conenido de a[1], pa +i es la dirección de a[i] y *(pa+i) es el contenido de a[i]. Todo lo mencionado es válido sin importar el tipo o tamaño de las variables del arreglo.</p>
         <code>
             <pre>
-                imagen
+            imagen  
             </pre>
         </code>
         <p>Por definición el valor de una varible o expresión de tipo arreglo es la dirección del elemento cero del arreglo, así que despues de la asignación pa = &a[0]; pa y a tienen valores idénticos. Puesto que e nombre de un arreglo es un sinónimo para la localidad de elemento incial, la asignación pa = &a[0] puede escribirse también como pa = a; Más sorprendente es el hecho de que una referencia a a[i] tambien puede escribirse como *(a+i).</p>
@@ -337,27 +336,27 @@
         <p>Las cadenas constanres no necesitan ser argumentos de funciones. Si pmensaje se declara como: char *pmensaje; entonces la proposición pmensaje = "ya es el tiempo"; se asigna a pmesanje un puntero al arreglo de caracteres. Esta no es la copia de una cadena; solo concierne a punteros.</p>
         <code>
             <pre>
-                char amensaje[] = "ya es el tiempo"; /*arreglo*/
-                char *pmensaje = "ya es el tiempo"; /*apuntador*/
+            char amensaje[] = "ya es el tiempo"; /*arreglo*/
+            char *pmensaje = "ya es el tiempo"; /*apuntador*/
             </pre>
         </code>
         <p>amensaje es un arreglo suficientemente grande como para contene la secuencia de caracteres y el "\0" que lo inicializa. por otro lado pmensaje es un puntero, incializado para apuntar a una cadena constante; el puntero puede modificarse posteriormente para qu apunte a algún otro lado. el resultado es indefinido si se trata de modificar el contenido de la cadena.</p>
         <p>La primera función es strcpy(s,t), que copia la cadena t a la cadena s. Sería agradable dedir simplemente s=t, pero esto copia el apuntador, no los caracteres. Para copiar los caracteres requiere de un ciclo. Primero está la version con un arrreglo, luego con apuntadores.</p>
         <code>
             <pre>
-                void strcopy(char *s, chat *t){
-                    int i;
-                    i = 0;
-                    while ((s[i] = t[i]) != '\0')
-                        i++;
-                }
+            void strcopy(char *s, chat *t){
+                int i;
+                i = 0;
+                while ((s[i] = t[i]) != '\0')
+                    i++;
+            }
 
-                void strcopy(char *s, char *t){
-                    while ((*s == *t) = '\0'){
-                        s++;
-                        t++;
-                    }
+            void strcopy(char *s, char *t){
+                while ((*s == *t) = '\0'){
+                    s++;
+                    t++;
                 }
+            }
             </pre>
         </code>
         <p>Ahora examinaremos con strcmp(s,t) que compara las caenas de caracteres sy t, y regresa un valor negativo, cero o positivo si s es la lexicográficamente menor que, igual a, o mayor que t. El valor se obtiene al resto los caracteres de la primera posicion en que s y t no coinciden.</p>
@@ -399,64 +398,64 @@
         <p>La rutina de salida sólo tiene que imprimir las líneas en el orden en que aparecen en el arreglo de apuntadores.</p>
         <code>
             <pre>
-                #include < stdio.h>
-                #include < string.h>
+            #include < stdio.h>
+            #include < string.h>
 
-                #define MAXLINES 5000 /*max # de lineas por ordenar*/
-                char *lineaptr[MAXLINES]; /*apuntadores a lineas de texto*/
-                int readlines(char *lineptr[], int nlines);
-                void writelines(char *lineptr[], int nlines);
+            #define MAXLINES 5000 /*max # de lineas por ordenar*/
+            char *lineaptr[MAXLINES]; /*apuntadores a lineas de texto*/
+            int readlines(char *lineptr[], int nlines);
+            void writelines(char *lineptr[], int nlines);
 
-                void qsort(char *lineptr[], int left, int right);
+            void qsort(char *lineptr[], int left, int right);
 
-                main(){
-                    int nlines; /*número de lineas de entrada leídas*/
-                    if ((nlines = readlines(lieptr, MAXLINES)) > = 0){
-                        qsort(lineptr, 0, nlines);
-                        return 0;
+            main(){
+                int nlines; /*número de lineas de entrada leídas*/
+                if ((nlines = readlines(lieptr, MAXLINES)) > = 0){
+                    qsort(lineptr, 0, nlines);
+                    return 0;
+                } else {
+                    printf("error: entrada demasiado grande para ordenarla\n");
+                    return 1;
+                }
+            }
+            #define MAXLEN 1000 /*max longitud de cualquier linea de entrada*/
+            int getline(char*, int);
+            char *alloc(int);
+
+            int readlines(char *lineptr[], int maxlines){
+                int len, nlines;
+                char *p, line[MAXLEN];
+
+                nlines = 0;
+                while ((len = getline(line, MAXLEN)) > 0){
+                    if (nlines >= maxlines || (p = alloc(len)) == NULL){
+                        return -1;
                     } else {
-                        printf("error: entrada demasiado grande para ordenarla\n");
-                        return 1;
+                        line[len-1] = '\0'; /*elimina carácter nuevo linea*/
+                        strcpy(p, line);
+                        lineptr[nlines++] = p;
                     }
                 }
-                #define MAXLEN 1000 /*max longitud de cualquier linea de entrada*/
-                int getline(char*, int);
-                char *alloc(int);
+                return nlines;
+            }
 
-                int readlines(char *lineptr[], int maxlines){
-                    int len, nlines;
-                    char *p, line[MAXLEN];
-
-                    nlines = 0;
-                    while ((len = getline(line, MAXLEN)) > 0){
-                        if (nlines >= maxlines || (p = alloc(len)) == NULL){
-                            return -1;
-                        } else {
-                            line[len-1] = '\0'; /*elimina carácter nuevo linea*/
-                            strcpy(p, line);
-                            lineptr[nlines++] = p;
-                        }
-                    }
-                    return nlines;
+            void writelines(char *lineptr[], int nlines){
+                int i;
+                for (i = 0; i < nlines; i++){
+                    printf("%s\n", lineptr[i]);
                 }
-
-                void writelines(char *lineptr[], int nlines){
-                    int i;
-                    for (i = 0; i < nlines; i++){
-                        printf("%s\n", lineptr[i]);
-                    }
-                }
+            }
             </pre>
         </code>
         <p>El principal nuevo elemento es la declaración para linptr, que indica que lineptr es un arreglo de MAXLINES elementos, cada uno de los cuales es un apuntador a char, Esto es, lineptr[i] es un apuntador a carácter, y *lineptr[i] es el carácter al que apunta, el primer carácter de la i-ésima linea de texto almacenada.</p>
         <p>Puesto que lineptr es por si mismo el nombre de un arreglo, puede tratarse como un apuntador en la misma forma que en nuestros ejemplos anteriores, y weitelines puede escribirse en su lugar como.</p>
         <code>
             <pre>
-                void writelines(char *lineptr[], int nlines){
-                    while (nlines -- > 0){
-                        printf("%s\n", *lineptr++);
-                    }
+            void writelines(char *lineptr[], int nlines){
+                while (nlines -- > 0){
+                    printf("%s\n", *lineptr++);
                 }
+            }
             </pre>
         </code>
         <p>Inicialmente *lineptr aunta a la primera línea; cada incremento lo avanza al siguiente apuntador a línea miestras nlines se disminuye.</p>
@@ -472,10 +471,10 @@
         <p>Definamos algunas estructuras propias para graficación. el onjeto básico es un punto, del cual supondremos que tiene una coordenada x y una coordenada y, ambas enteras. Los dos componentes pueden ser colocados en una estructura declarada así:</p>
         <code>
             <pre>
-                struct point {
-                    int x;
-                    int y;
-                };
+            struct point {
+                int x;
+                int y;
+            };
             </pre>
         </code>
         <p>La palabra reservada struct presenta la declaracion de una estructura, que es una lisya de declaraciones entre llaves. Un nombre optativo, llamado rótulo de estructura, puede seguir a la palabra struct (como aqui lo hace point). El rótulo da nombre a esta clase de estructura, y en adelante puede ser utilizado como una abreviatura para la parte de declaraciones entre llaves.</p>
@@ -486,7 +485,7 @@
         <p>Se hace referencia a un miembro de una estructua en particular en una expresión con una construccion de la forma nombre-estructura.miembro, El operador miembro de estructura "." conecta al nombre de la estructura con el nombre del miembro. Por ejemplo, para imprimir las coordenadas del punto pt</p>
         <code>
             <pre>
-                printf("%d,%d", pt.x, pt.y);
+            printf("%d,%d", pt.x, pt.y);
             </pre>
         </code>
     </div>
@@ -497,25 +496,25 @@
         <p>Investiguemos las estructuras escribiendo algunas funciones para manipular puntos y rectangulos. Hay por lo menos tres acercamientos posibles: pasar separadamente los componentes, pasar una estructura completa o pasar un apuntador a ella. Cada uno tiene sus puntos buenos y malos. La primera función, makepoint, toma dos enteros y regresa una estructura point:</p>
         <code>
             <pre>
-                struct point makepoint(int x, int y){
-                    struct point temp;
+            struct point makepoint(int x, int y){
+                struct point temp;
 
-                    temp.x = x;
-                    temp.y = y;
-                    return temp;
-                }
+                temp.x = x;
+                temp.y = y;
+                return temp;
+            }
             </pre>
         </code>
         <p>Nótese que no hay conflictos entre el nombre del argumento y el miembro con el mismo nombre; incluso la reutilización de los nombres refuerza el vinculo. makepint ahora se puede usar para inicializar dinámicamente cualquier estructura, o para proporcianr los argumentos de la estructura a una función:</p>
         <code>
             <pre>
-                struct rect screen;
-                struct pint middle;
-                struct pint makepoint(int, int);
+            struct rect screen;
+            struct pint middle;
+            struct pint makepoint(int, int);
 
-                screen.pt1 = makepint(0, 0);
-                screen.pt2 = makepoint(XMAX, YMAX);
-                middle = makepint((screen.pt1.x + screen.pt2.x)/2,(screen.pt1.y + screen.pt2.y)/2);
+            screen.pt1 = makepint(0, 0);
+            screen.pt2 = makepoint(XMAX, YMAX);
+            middle = makepint((screen.pt1.x + screen.pt2.x)/2,(screen.pt1.y + screen.pt2.y)/2);
             </pre>
         </code>
         <p></p>
@@ -533,16 +532,16 @@
         <p>La salida producda por printf tambien encuentra su salida estandar. Las llamadas a putchar a printf pueden estar traslapadas - la salida aparace en el orden en que se hicieron las llamadas.</p>
         <code>
             <pre>
-                #include < stdio.h>
-                #include < ctype.h>
+            #include < stdio.h>
+            #include < ctype.h>
 
-                main(){
-                    int c;
-                    while ((c = getchar()) !0 EOF){
-                        putchar(tolowe(c));
-                    }
-                    return 0;
+            main(){
+                int c;
+                while ((c = getchar()) !0 EOF){
+                    putchar(tolowe(c));
                 }
+                return 0;
+            }
             </pre>
         </code>
     </div>
@@ -565,13 +564,13 @@
         <p>Ahora veremos los efectos de una variavle de especificacciones al imprimir "hola, mundo" (11 caracteres) con una agregación de dos puntos(:) al inicio y al final.</p>
         <code>
             <pre>
-                :%s:  :hola,mundo:
-                :%10s: :hola, mundo:
-                :%.10s: :hola, mund:
-                :%-10s: :hola, mundo:
-                :%.15s: :hola, mundo    :
-                :%15.10s: :      hola,mund:
-                :%-15.10s: :hola, mund     :
+            :%s:  :hola,mundo:
+            :%10s: :hola, mundo:
+            :%.10s: :hola, mund:
+            :%-10s: :hola, mundo:
+            :%.15s: :hola, mundo    :
+            :%15.10s: :      hola,mund:
+            :%-15.10s: :hola, mund     :
             </pre>
         </code>
     </div>
@@ -584,15 +583,15 @@
         <p>Algunos caracteres de conversión indica la interpretación del campo de entrada, El argumento  correspondiente debe ser un apuntador.</p>
         <code>
             <pre>
-                d, entero decimal; int *.
-                i entero; int *. El entero puede estar en octal o hexadecimal.
-                o entero octal; int *.
-                u entero decimal sin signo; insigned int *.
-                x entero hexadecimal; int *.
-                c caracteres; char *. El salto normal sobre espacios en blanco es suprimido.
-                s cadena de caracteres; char *, apunta a un arreglo de caracteres suficientemente grande para la cadena y termina en '\0'.
-                e, f, g número de punto flotante con signo, punto decimal y exponente optativos; float *.
-                % '%' literal; no se hace asignación alguna.
+            d, entero decimal; int *.
+            i entero; int *. El entero puede estar en octal o hexadecimal.
+            o entero octal; int *.
+            u entero decimal sin signo; insigned int *.
+            x entero hexadecimal; int *.
+            c caracteres; char *. El salto normal sobre espacios en blanco es suprimido.
+            s cadena de caracteres; char *, apunta a un arreglo de caracteres suficientemente grande para la cadena y termina en '\0'.
+            e, f, g número de punto flotante con signo, punto decimal y exponente optativos; float *.
+            % '%' literal; no se hace asignación alguna.
             </pre>
         </code>
         <p>Los carácteres de conversión d, i, o, u, x pueden ser precedidos pro 'h' para indicar que en la lisya de argumentos aparece un apuntador a short o 'l' para un apuntador a long en la lista de argumentos.</p>
@@ -607,8 +606,8 @@
         <p>Las definiciones ontenidas de < stdio> incluyen una declaracipon de estructura llamada FILE. La única declaración necesaria para un apuntador de archivo.</p>
         <code>
             <pre>
-                FILE *fp;
-                FILE *fopen(char *nombre, chat *modo);
+            FILE *fp;
+            FILE *fopen(char *nombre, chat *modo);
             </pre>
         </code>
         <p>Esto dice que fp es un apuntador a un FILE, y fopen regresa un apuntador a FILE. La llamada a fopen en un programa es fp = fopen(nombre, modo);. El primer argumento nombre es una cadena de caracteres que contiene el nombre del archivo.</p>
@@ -619,38 +618,38 @@
         <p>Para entrada o salida de archivos con formato se puede emplear las funciones fscanf y fprintf. Estas son idénticas a scanf y printf, excepto en que el primer argumento es un apuntador de archvo que especifica el archivo que será escrito o leído; la cadena de formaro es el segundo argumento.</p>
         <code>
             <pre>
-                int fscanf(FILE *fo, char *formato, ...)
-                int fprintf(FILE *fo, char *formato, ...)
+            int fscanf(FILE *fo, char *formato, ...)
+            int fprintf(FILE *fo, char *formato, ...)
             </pre>
         </code>
         <code>
             <pre>
-                #include < stdio.h>
-                main(int argc, chat *argc[]){
-                    FILE *fp;
-                    void filecopy(FILE *, FILE *);
-                    if (argc == 1){
-                        . filecopy(stdin, stdout);
-                    } else {
-                        while (--argc > 0){
-                            if ((fp =open(*++argv, "r")) == NULL){
-                                printf("cat:no se puede abrir %s'n", argv);
-                                return 1;
-                            } else {
-                                filecopy(fp,stdout);
-                                fclose(fp);
-                            }
+            #include < stdio.h>
+            main(int argc, chat *argc[]){
+                FILE *fp;
+                void filecopy(FILE *, FILE *);
+                if (argc == 1){
+                    . filecopy(stdin, stdout);
+                } else {
+                    while (--argc > 0){
+                        if ((fp =open(*++argv, "r")) == NULL){
+                            printf("cat:no se puede abrir %s'n", argv);
+                            return 1;
+                        } else {
+                            filecopy(fp,stdout);
+                            fclose(fp);
                         }
                     }
-                    return 0;
                 }
+                return 0;
+            }
 
-                void filecopu(FILE *ifp, FILE *ofp){
-                    int c;
-                    while ((c = getc(ifp)) != EOF){
-                        putc(c, ofp);
-                    }
+            void filecopu(FILE *ifp, FILE *ofp){
+                int c;
+                while ((c = getc(ifp)) != EOF){
+                    putc(c, ofp);
                 }
+            }
             </pre>
         </code>
         <p>La función int fclose(FILE *fp) es lo inverso a fopen, intrrumpe la conexión que fue establecida pro fopen entre el apuntador de archivo y el nombre externo, liberando al apuntador de archivo para otro archivo.</p>
@@ -662,31 +661,31 @@
         <p>Para maneajr mejor esta situación, se asigna un segundo flujo de salida, llamda stderr, aun progrma en la mmisma forma que stdon y srdout. La salida escrita hacia stderr normalmente aparece en la pantalla, aun si la salida estandar es redirigida.</p>
         <code>
             <pre>
-                #include < stdio.h>
-                main(int argc, chat *argc[]){
-                    FILE *fp;
-                    void filecopy(FILE *, FILE *);
-                    char *prog = argv[0]; /*nombre del programa para errores*/
-                    if (argc == 1){
-                        . filecopy(stdin, stdout);
-                    } else {
-                        while (--argc > 0){
-                            if ((fp =open(*++argv, "r")) == NULL){
-                                fprintf(stderr,"%s: no se puede abrir %s\n", prog, *argv);
-                                exit(1);
-                            } else {
-                                filecopy(fp,stdout);
-                                fclose(fp);
-                            }
+            #include < stdio.h>
+            main(int argc, chat *argc[]){
+                FILE *fp;
+                void filecopy(FILE *, FILE *);
+                char *prog = argv[0]; /*nombre del programa para errores*/
+                if (argc == 1){
+                    . filecopy(stdin, stdout);
+                } else {
+                    while (--argc > 0){
+                        if ((fp =open(*++argv, "r")) == NULL){
+                            fprintf(stderr,"%s: no se puede abrir %s\n", prog, *argv);
+                            exit(1);
+                        } else {
+                            filecopy(fp,stdout);
+                            fclose(fp);
                         }
                     }
-
-                    if (ferror(stdout)){
-                        fprintf(stderr, "%s: error al escribir stdout\n", prog);
-                        exit(2);
-                    }
-                    exit(0);
                 }
+
+                if (ferror(stdout)){
+                    fprintf(stderr, "%s: error al escribir stdout\n", prog);
+                    exit(2);
+                }
+                exit(0);
+            }
             </pre>
         </code>
         <p>El programa señala erroes en dos manereas. Primero, la salida de diagnosticos producida por fprintf ca hcaia stderr, de modo que encuentra su camino hacia la pantalla en lugar de desaparecer en una interconexión o dentro de un archico de salida. Incluimos el nombre del programa, toamdolo de argv[0]. El argumento exit está disponible para cualquier proceso que haya llamado a éste, para que se pueda probar el exito ofracaso del programa.</p>
@@ -727,8 +726,8 @@
         <p>El apuntador regresado por malloc ó calloc tiene la alineación apropiada para el objeto en cuestión, pero se le debe hacer una conversión forzada al tipo apropiado como en:</p>
         <code>
             <pre>
-                int ip;
-                ip = (in *) calloc(n, sizeof(int));
+            int ip;
+            ip = (in *) calloc(n, sizeof(int));
             </pre>
         </code>
         <p>free(p) libera el espacio apuntado por p, donde p se obtuvo originalmente por una llamada a malloc o calloc. No existe restricciones sobre el orden en el que se libera el espacio, pero es una grave error liberar algo no  obtenido por una llamada a calloc o malloc.</p>
