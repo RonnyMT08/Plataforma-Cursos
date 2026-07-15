@@ -12,30 +12,32 @@
 </head>
 <body>
     <nav>
-        <div class="nav_logo">
-            <a href="url_for('index')"><img src="{{ url_for('static', filename='images/logo_bp2.png')}}" alt=""></a>
-        </div>
-        <div class="nav_botones">
-            <div class="nav_div">
-                <a class="nav_div_a" href="{{ url_for('index')}}">Inicio</a>
+        <div class="nav_barra">
+            <div class="nav_logo">
+                <a href="url_for('index')"><img src="{{ url_for('static', filename='images/logo_bp2.png')}}" alt=""></a>
             </div>
-            <div class="nav_div">
-                <button class="nav_div_btn" >Cursos</button>
-                <div class="nav_div_a_opciones">
-                    <a class="nav_div_a" href="{{ url_for('curso_informacion') }}">Fundamentos</a>
-                    <a class="nav_div_a" href="">Algebaaara</a>
-                    <a class="nav_div_a" href="">Fisica</a>
+            <div class="nav_botones">
+                <div class="nav_div">
+                    <a class="nav_div_a" href="{{ url_for('index')}}">Inicio</a>
                 </div>
-            </div>
-            <div class="nav_div">
-                <a class="nav_div_a" href="">Registrarse</a>
-            </div>
-            <div class="nav_div">
-                <a class="nav_div_a" href="">Contactanos</a>
-            </div>
-            <div class="nav_div">
-                <a class="nav_div_a" href="">Mas</a>
-            </div>
+                <div class="nav_div">
+                    <button class="nav_div_btn" >Cursos</button>
+                    <div class="nav_div_a_opciones">
+                        <a class="nav_div_a" href="{{ url_for('curso_informacion') }}">Fundamentos</a>
+                        <a class="nav_div_a" href="">Algebaaara</a>
+                        <a class="nav_div_a" href="">Fisica</a>
+                    </div>
+                </div>
+                <div class="nav_div">
+                    <a class="nav_div_a" href="">Registrarse</a>
+                </div>
+                <div class="nav_div">
+                    <a class="nav_div_a" href="">Contactanos</a>
+                </div>
+                <div class="nav_div">
+                    <a class="nav_div_a" href="">Mas</a>
+                </div>
+            </div>  
         </div>
     </nav>
     {% block content %}

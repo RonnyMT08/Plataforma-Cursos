@@ -17,12 +17,19 @@ body {
 BARRA DE NAVEGACION
 ****************************/
 nav {
+    display: flex;
+    justify-content: center;
     position: fixed;
+    width: 100%;
+}
+
+.nav_barra {
+    background-color: var(--primary-color);
     display: grid;
     grid-template-columns: 1fr 4fr;
-    justify-content: space-around;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
+    border-radius: 0rem 0rem 1rem 1rem;   
 }
 .nav_logo {
     display: flex;
@@ -48,7 +55,7 @@ nav {
 }
 
 .nav_div_btn {
-    background-color: var(--primary-color);
+    background-color: transparent;
     display: flex;
     width: 7rem;
     justify-content: center;
@@ -62,7 +69,6 @@ nav {
 }
 
 .nav_div_a {
-    background-color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
