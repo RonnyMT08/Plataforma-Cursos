@@ -1,5 +1,7 @@
 # Plataforma-Cursos
 
+![imagen de la pagina](/Frontend/static/images/pagina.png)
+
 Objetivo: 
 
 * Crear una página web como almacenamiento de cursos a disponibilidad libre.
@@ -10,8 +12,7 @@ Objetivo:
 
 Integrantes: 
 
-* [Ronny Mamani Torrez]("https://github.com/RonnyMT08")
-* [Nombre Apellido]("link_de_github")
+* [Ronny Mamani Torrez](https://github.com/RonnyMT08)
 
 ## ¿Cómo levantar con Docker-compose?
 
