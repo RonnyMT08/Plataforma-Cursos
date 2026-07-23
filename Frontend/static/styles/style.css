@@ -114,6 +114,78 @@ nav {
 }
 
 /****************************
+FOOTER PIE DE PAGINA
+****************************/
+footer {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    width: 100%;
+}
+
+.footer-email {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    width: 100%;
+}
+
+.footer-email__message {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.footer-email__message-img {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+.footer-email__message-img img {
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+}
+
+.footer-email__message-text {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.footer-email__scope {
+    display: flex;
+    width: auto;
+    height: 100%;
+    margin: 0rem 1rem;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.footer-email__scope-inputext{
+    background-color: blue;
+    padding: 1rem;
+}
+
+.footer-email__scope-inputext input[type="text" i] {
+    padding-block: 0px;
+    padding-inline: 0px;
+    border: none;
+}
+
+.footer-email__scope-suscribe {
+    background-color: green;
+    padding: 1rem;
+}
+
+
+
+
+/****************************
 INDEX
 ****************************/
 
