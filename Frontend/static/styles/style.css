@@ -117,7 +117,7 @@ nav {
 FOOTER PIE DE PAGINA
 ****************************/
 footer {
-    background-color: bisque;
+    background: linear-gradient(0deg, var(--color-back), var(--secundary-color));
     display: flex;
     flex-direction: column;
     height: 15rem;
@@ -125,7 +125,6 @@ footer {
 }
 
 .footer-email {
-    background-color: red;
     display: flex;
     flex-direction: row;
     height: 30%;
@@ -141,12 +140,12 @@ footer {
 .footer-email__message-img {
     display: flex;
     justify-content: center;
-    flex-direction: column;    
+    flex-direction: column; 
 }
 
 .footer-email__message-img img {
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
 }
 
@@ -154,6 +153,13 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+}
+.footer-email__message-text-title {
+    font-weight: bold;
+}
+
+.footer-email__message-text-text {
+    font-family: inherit;
 }
 
 .footer-email__scope {
@@ -167,20 +173,80 @@ footer {
 }
 
 .footer-email__scope-inputext{
-    background-color: blue;
+    background-color: var(--primary-color);
+    border-radius: 1rem 0rem 0rem 1rem;
     padding: 1rem;
 }
 
 .footer-email__scope-inputext input[type="text" i] {
+    background-color: initial;
     padding-block: 0px;
     padding-inline: 0px;
     border: none;
+    font-size: inherit;
+    border-radius: 0.35rem;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
-.footer-email__scope-suscribe {
-    background-color: green;
-    padding: 1rem;
+.footer-email__scope-inputext input::placeholder {
+    color: inherit;
 }
+
+
+.footer-email__scope-suscribe {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-content__description {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 10.5rem;
+}
+
+.footer-content__description-title, .footer-content__redes-title, .footer-content__cursos-title, .footer-content__mycount-title{
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.footer-content__description-text, .footer-content__redes-text, .footer-content__cursos-text, .footer-content__mycount-text{
+    padding: 0rem 1rem;
+}
+
+.footer-content__redes-text ul, .footer-content__description-text li, .footer-content__cursos-text ul, .footer-content__cursos-text li, .footer-content__mycount-text li, .footer-content__mycount-text ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: None;
+}
+
+.footer-content__cursos-text a, .footer-content__description-text a, .footer-content__mycount-text a, .footer-content__redes-text a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-content__redes, .footer-content__mycount, .footer-content__cursos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 10.5rem;
+}
+
+.footer-content__cursos-text a:hover, .footer-content__description-text a:hover, .footer-content__mycount-text a:hover, .footer-content__redes-text a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
 
 
 
