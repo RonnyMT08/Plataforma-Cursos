@@ -91,7 +91,6 @@ nav {
     font-size: inherit;
     color: white;
     border: none;
-    cursor: pointer;
     padding: 0rem 1rem;
     border-radius: 0px 5px 5px 0px;
 }
@@ -100,7 +99,7 @@ nav {
 }
 
 .nav-barra__botones-btn-buscar button:hover{
-    
+    cursor: pointer;
 }
 
 
