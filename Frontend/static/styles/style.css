@@ -6,7 +6,7 @@ COLORES GLOBALES
     --color-back: rgb(75 43 21);
     --primary-color: rgb(223 168 110 / 82%);
     --secundary-color: #a55511;
-    --font-color: rgb(255 255 255);
+    --font-color: white;
 }
 
 body {
@@ -26,7 +26,7 @@ nav {
 }
 
 .nav-barra {
-    background-color: var(--primary-color);
+    background: linear-gradient(180deg, #7d4321, transparent);
     display: grid;
     grid-template-columns: 1fr 4fr;
     flex-direction: column;
@@ -36,9 +36,20 @@ nav {
 }
 .nav-barra__logo {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 4rem;
+}
+
+.nav-barra__logo span{
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    font-weight: bolder;
+    font-family: inherit;
+    color: var(--font-color);
+    font-size: 1.4rem;
 }
 
 .nav-barra__logo a {
@@ -46,7 +57,8 @@ nav {
 }
 
 .nav-barra__logo img {
-    height: 70px;
+    height: 4rem;
+    padding: 0rem 1rem;
 }
 
 .nav-barra__botones {
@@ -67,7 +79,7 @@ nav {
     align-items: center;
     padding: 1rem 2rem;
     text-decoration: none;
-    color: inherit;
+    color: var(--font-color);
     border-radius: 1rem;
     transition: all 0.2s ease-in-out;
 }
@@ -87,7 +99,7 @@ nav {
 }
 
 .nav-barra__botones-btn-buscar button{
-    background-color: black;
+    background-color: transparent;
     font-size: inherit;
     color: white;
     border: none;
@@ -96,10 +108,13 @@ nav {
 }
 .nav-barra__botones-btn a:hover {
     color: white;
+    text-decoration: underline;
 }
 
 .nav-barra__botones-btn-buscar button:hover{
     cursor: pointer;
+    background-color: black;
+    color: var(--font-color);
 }
 
 
@@ -115,6 +130,7 @@ footer {
 }
 
 .footer-email {
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: row;
     height: 30%;
@@ -134,9 +150,8 @@ footer {
 }
 
 .footer-email__message-img img {
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
+    height: 70%;
+    padding: 0rem 1rem;
 }
 
 .footer-email__message-text {
@@ -153,6 +168,7 @@ footer {
 }
 
 .footer-email__scope {
+
     display: flex;
     width: auto;
     height: 100%;
@@ -163,7 +179,7 @@ footer {
 }
 
 .footer-email__scope-inputext{
-    background-color: var(--primary-color);
+    background-color: var(--secundary-color);
     border-radius: 1rem 0rem 0rem 1rem;
     padding: 1rem;
 }
