@@ -72,9 +72,37 @@ nav {
     transition: all 0.2s ease-in-out;
 }
 
+.nav-barra__botones-btn-buscar{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+.nav-barra__botones-btn-buscar input{
+    padding-block: 0px;
+    border: none;
+    width: 70%;
+    font-size: inherit;
+    padding-inline: 4px 0px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.nav-barra__botones-btn-buscar button{
+    background-color: black;
+    font-size: inherit;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0rem 1rem;
+    border-radius: 0px 5px 5px 0px;
+}
 .nav-barra__botones-btn a:hover {
     color: white;
 }
+
+.nav-barra__botones-btn-buscar button:hover{
+    
+}
+
 
 /****************************
 FOOTER PIE DE PAGINA
