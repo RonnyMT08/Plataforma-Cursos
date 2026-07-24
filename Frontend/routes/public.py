@@ -8,3 +8,12 @@ def register(app):
     @app.route("/curso-infomacion")
     def curso_informacion():
         return render_template('curso_informacion.html')
+
+    @app.route("/fundamentos")
+    def fundamentos():
+        return render_template('fundamentos.html')
+
+    
+    @app.route("/modelo")
+    def modelo():
+        return render_template('modelo.html')

@@ -382,60 +382,6 @@ INDEX
 }
 
 /****************************
-INFORMACION CUSOS
-****************************/
-.curso_info {
-    display: flex;
-    flex-direction: column;
-    padding: 4rem 2rem 0rem;
-}
-
-.curso_info h2 {
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    border-radius: 1rem;
-}
-
-.curso_info ol {
-    padding: 0rem 1rem;
-    margin: 0rem;
-}
-
-.curso_info li {
-    margin: 1rem 0rem;
-}
-
-.curso_info pre {
-    display: flex;
-    margin-block: 0px;
-}
-
-.curso_info code {
-    margin: 0px;
-}   
-
-.curso_info_div {
-    background-color: #ffd9b9;;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
-}
-
-.curso_info_div h3 {
-    display: flex;
-    justify-content: center;
-}
-
-.curso_info_div pre {
-    display: flexbox;
-    justify-content: center;
-}
-
-/****************************
 CONTENEDOR DE CURSOS
 ****************************/
 .container-cursos {
@@ -504,4 +450,167 @@ CONTENEDOR DE CURSOS
     box-shadow: 5px 4px 1px var(--secundary-color);
     transform: translateY(-0.7rem);
 }
+
+/****************************
+INFORMACION CUSOS
+****************************/
+.curso_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0rem 2rem 0rem;
+}
+
+.curso_info h2 {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.curso_info ol {
+    padding: 0rem 1rem;
+    margin: 0rem;
+}
+
+.curso_info li {
+    margin: 1rem 0rem;
+}
+
+.curso_info pre {
+    display: flex;
+    margin-block: 0px;
+}
+
+.curso_info code {
+    margin: 0px;
+}   
+
+.curso_info_div {
+    background-color: #ffd9b9;;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.curso_info_div h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.curso_info_div pre {
+    display: flexbox;
+    justify-content: center;
+}
+
+/****************************
+MAPA FUNDAMENTOS
+****************************/
+.contenedor-fundamentos {
+    display: flex;
+    background-image: url("/static/images/mapa_fundamentos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 900px;
+    height: 55vh;
+    border-radius: 1rem;
+}
+
+.contenedor-fundamentos__punto {
+    text-align: center;
+    position: absolute;
+}
+
+.contenedor-fundamentos__punto a{
+    width: auto;
+    height: auto;
+    background: gold;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+}
+
+/* Posiciones de los puntos */
+#p1 { top: 10%; left: 10%; }
+#p2 { top: 33%; left: 20%; }
+#p3 { top: 57%; left: 15%; }
+#p4 { top: 75%; left: 30%; }
+#p5 { top: 46%; left: 37%; }
+#p6 { top: 18%; left: 42%; }
+#p7 { top: 45%; left: 52%; }
+#p8 { top: 74%; left: 61%; }
+#p9 { top: 38%; left: 72%; }
+#p10 { top: 53%; left: 85%; }
+
+
+
+
+svg {
+    display: block;   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;       /* se ajusta en proporción */
+    pointer-events: none; /* que no bloquee clicks */
+}
+
+path {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    stroke: white;
+    stroke-width: 4;
+    fill: none;
+    stroke-dasharray: 10; /* estilo línea discontinua */
+}
+
+.contenedor-fundamentos__curso{
+    background-color: rgb(136, 92, 92);
+    margin: 2rem 0rem 0rem 0rem;
+}
+
+
+.contenedor-fundamentos__curso h2{
+    background-color: white;
+}
+
+.conteiner-curso {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner-curso h3 {
+    padding: 0rem 4rem;
+}
+.conteiner-curso__content{
+    display: flex;
+    flex-direction: row;
+}
+
+.conteiner-curso__content-text{
+    width: 50%;
+    margin: 0rem 4rem;
+    padding: 0rem 1rem;
+}
+
+.conteiner-curso__content-code{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0rem 4rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+
 
