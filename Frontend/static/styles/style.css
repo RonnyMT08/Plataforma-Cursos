@@ -130,7 +130,7 @@ footer {
 }
 
 .footer-email {
-    background-color: var(--primary-color);
+    background: linear-gradient(-45deg, black, transparent);
     display: flex;
     flex-direction: row;
     height: 30%;
@@ -168,7 +168,6 @@ footer {
 }
 
 .footer-email__scope {
-
     display: flex;
     width: auto;
     height: 100%;
@@ -349,13 +348,13 @@ INDEX
     border-radius: 1rem;
 }
 
-.container-description__starts{
+.container-description__stars{
     height: 100%;
     width: 50%;
     color: var(--font-color);
 }
 
-.container-description__starts ol, .container-description__starts li{
+.container-description__stars ol, .container-description__stars li{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -366,8 +365,10 @@ INDEX
     height: 100%;
 }
 
-.container-description__starts{
+.container-description__stars li:hover{
     font-size: inherit;
+    color: green;
+    font-size: 2rem;
 }
 
 .conteiner-img__resenias a:hover {
@@ -438,32 +439,38 @@ INFORMACION CUSOS
 CONTENEDOR DE CURSOS
 ****************************/
 .container-cursos {
-    background-color: var(--secundary-color);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     margin: 1rem;
     border-radius: 1rem;
 }
 
 .container-cursos__card-curso {
+    background-color: var(--secundary-color);
     display: flex;
     flex-direction: column;
     margin: 1rem;
     height: 12rem;
+    padding: 1rem;
     width: 10rem;
     border-radius: 0.5rem;
+    box-shadow: 5px 4px 1px var(--primary-color);
+    border: 1px solid black;
+    transition: transform 0.5s ease, background 0.7s ease;
 }
 
 .container-cursos__img-curso {
     background-color: var(--color-back);
-    height: 70%;
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
 }
 
 .container-cursos__img-curso img{
-    width: 100%;
-    height: 100%;
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
 }
 
@@ -479,28 +486,22 @@ CONTENEDOR DE CURSOS
     flex-direction: column;
     justify-content: center;
     margin: 1rem;
-    height: 12rem;
     width: 7rem;
-    border-radius: 0.5rem;
-}
-
-.container-cursos__img-mas-cursos {
-    background-color: var(--color-back);
-    height: 50%;
-    border-radius: 50%;
-}
-
-.container-cursos__img-mas-cursos img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
 }
 
 .container-cursos__title-mas-cursos{
-    height: 30%;
+    background-color: #a55511;
+    height: 12rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-radius: 0.5rem;
+}
+
+.container-cursos__card-curso:hover {
+    background-color: var(--primary-color);
+    box-shadow: 5px 4px 1px var(--secundary-color);
+    transform: translateY(-0.7rem);
 }
 
