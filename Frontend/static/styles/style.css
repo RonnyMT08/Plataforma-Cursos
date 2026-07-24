@@ -589,13 +589,22 @@ path {
     flex-direction: column;
 }
 
-.conteiner-curso h3 {
-    padding: 0rem 4rem;
-    color: aliceblue;
-}
 .conteiner-curso__content{
     display: flex;
     flex-direction: row;
+}
+.container-curso__content-title {
+    margin: 0rem 4rem;
+}
+
+.container-curso__content-title h3 {
+    background-color: #a55511;
+    display: flex;
+    justify-content: center;
+    width: 10rem;
+    margin: 0px;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
 }
 
 .conteiner-curso__content-text{
@@ -606,7 +615,7 @@ path {
 }
 
 .conteiner-curso__content-code{
-    background-color: aliceblue;
+    color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;

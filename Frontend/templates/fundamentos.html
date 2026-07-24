@@ -35,10 +35,9 @@
         <h2>INTRODUCCIÓN</h2>
         
         <div class="conteiner-curso">
-            <h3>Hola Mundo en C</h3>
-            <div class="conteiner-curso__content">
-
+            <div class="conteiner-curso__content">                
                 <div class="conteiner-curso__content-text">
+                    <h3>Hola Mundo en C</h3>
                     <p>Todo programa da inicio en su ejecución con un "main" como parte principal del programa. </p>
                     <p>Al inicio incluimos un "#include ...", indica al compilador que debe incluir informacion acerca de la biblioteca de entrada y salida en C.</p>
                     <p>En este caso la funcion "prinft" tiene el argumento "hola mundo\n" el cual es el texto que se llegara a mostrar, la secuencia "\n" representa el caracter de la una nueva linea.</p>
@@ -58,7 +57,6 @@
         </div>
 
         <div class="conteiner-curso">
-            <h3>Variables</h3>
             <div class="conteiner-curso__content">
                 <div class="conteiner-curso__content-code">
                     <code>
@@ -78,8 +76,9 @@
                         %6.2f escribe como punto flotante, por lo menos con 6 caracteres de ancho y 2 después del punto decimal. <br>
                     </code>
                 </div>
-
+                
                 <div class="conteiner-curso__content-text">
+                    <h3>Variables</h3>
                     <p>En C, se deben decalrar todas las variables antes de su uso, generamente al principio de la función.</p>
                     <p>Una declaración otifica las propiedades de una variable, consra de un nombre de tipo y de una lista de variables.</p>
                     <p>int representa a número enteros, float es u punto flotante es decir que pueden tener parte fraccionaria. <br>
@@ -90,9 +89,9 @@
             </div>
 
         <div class="conteiner-curso">
-            <h3>Constantes simbólicas</h3>
             <div class="conteiner-curso__content">
                 <div class="conteiner-curso__content-text">
+                    <h3>Constantes simbólicas</h3>
                     <p>Es una mala practica poner "númeross mágicos" como en 25 directamente en el programa, ya que se debe proporcionar información sobre el dato. una linea "#define" esa como se define un nombre simbólico o constante simbólica.</p>
                 </div>
                 <div class="conteiner-curso__content-code">
@@ -107,7 +106,6 @@
         </div>
     
         <div class="conteiner-curso">
-            <h3>Funciones</h3>
             <div class="conteiner-curso__content">
                 <div class="conteiner-curso__content-code">
                     <code>
@@ -116,20 +114,21 @@
                         Postcondiciones: eleva la base a la n-ésima potencia. <br>
                         */ <br>
                         int numero_cuadrado(int base, int exponente){ <br>
-                            int p; <br>
+                        &nbsp;&nbsp;&nbsp;int p; <br>
                             
-                            for (p = 1; n > 0; --n){ <br> 
-                                p = p * base; <br>
-                            } <br>
-                            return p; <br>
+                        &nbsp;&nbsp;&nbsp;for (p = 1; n > 0; --n){ <br> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p = p * base; <br>
+                        &nbsp;&nbsp;&nbsp;} <br>
+                        &nbsp;&nbsp;&nbsp;return p; <br>
                         } <br>
                         
                         int main(){ <br>
-                            int numero_cuadrado(int, int);<br>
+                        &nbsp;&nbsp;&nbsp;int numero_cuadrado(int, int);<br>
                         } <br>
                     </code>
                 </div>
                 <div class="conteiner-curso__content-text">
+                    <h3>Funciones</h3>
                     <p>Una función es proporcional a una subrutina, proporcina una forma conveniente de encaosial algunos cálculos, que se pueden emplear posteriormente.</p>
                     <p>Una función tiene la forma de: "tipo-de-retorno nombre-de-la-función (parametros) { cuerpo }" </p>
                     <p>Posteriormente lo podesmos llamar o hacer uso del mismo dentro del main</p>
