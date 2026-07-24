@@ -573,13 +573,15 @@ path {
 }
 
 .contenedor-fundamentos__curso{
-    background-color: rgb(136, 92, 92);
+    background-color: transparent;
     margin: 2rem 0rem 0rem 0rem;
 }
 
 
 .contenedor-fundamentos__curso h2{
-    background-color: white;
+    color: white;
+    text-decoration: underline;
+    background-color: transparent;
 }
 
 .conteiner-curso {
@@ -589,6 +591,7 @@ path {
 
 .conteiner-curso h3 {
     padding: 0rem 4rem;
+    color: aliceblue;
 }
 .conteiner-curso__content{
     display: flex;
@@ -596,6 +599,7 @@ path {
 }
 
 .conteiner-curso__content-text{
+    color: #ffeb54;
     width: 50%;
     margin: 0rem 4rem;
     padding: 0rem 1rem;
