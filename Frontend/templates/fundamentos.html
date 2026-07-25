@@ -136,125 +136,186 @@
         </div>
     </div>
 
+    <div class="contenedor-fundamentos__curso">
+        <h2>TIPOS, OPERADORES Y EXPRESIONES</h2>
 
-    <h2>TIPOS, OPERADORES Y EXPRESIONES</h2>
-    <div class="curso_info_div">
-        <h3>Tipos y tamaños de datos</h3>
-        <p>
-            char(8bits)--un solo byte, capa de contener un caracter del subconjunto de caracteres local. <br>
-            int(16 o 32bits)  --un enter, normalmente del tamaño naturalde los enteros en la máquina en la que se ejecuta. <br>
-            float() -- punto flotante de presicion normalmente <br>
-            double -- punto glotante de doble presicion. <br>
-            tambien existen los short(16bits), long(32bits), para los enteros.
-        </p>    
-    </div>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">  
+                <div class="conteiner-curso__content-text">
 
-    <div class="curso_info_div">
+                    <h3>Tipos y tamaños de datos</h3>
+                    <p>
+                        char(8bits)--un solo byte, capa de contener un caracter del subconjunto de caracteres local. <br>
+                        int(16 o 32bits)  --un enter, normalmente del tamaño naturalde los enteros en la máquina en la que se ejecuta. <br>
+                        float() -- punto flotante de presicion normalmente <br>
+                        double -- punto glotante de doble presicion. <br>
+                        tambien existen los short(16bits), long(32bits), para los enteros.
+                    </p>  
+                </div> 
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        char(8bits)--un solo byte, capa de contener un caracter del subconjunto de caracteres local. <br>
+                        int(16 o 32bits)  --un enter, normalmente del tamaño naturalde los enteros en la máquina en la que se ejecuta. <br>
+                        float() -- punto flotante de presicion normalmente <br>
+                        double -- punto glotante de doble presicion. <br>
+                        tambien existen los short(16bits), long(32bits), para los enteros.
+                    </code>  
+                </div>  
+            </div>
+        </div>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">  
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        int -> 12345
+                        long -> 123456789L, cualquier entero demasiado grande ara caber dentri de un int tambien será tomado como long,
+                        unsigned -> implica una constante sin signos 'u' ó 'U'
+                        long undsigned -> 1324556UL
+                        float -> un punto flotante contiene una punto 12.2
+                        exponente -> una constante con un exponente 'le-2'
+                    </code>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <h3>Constantes</h3>
+                    <p>
+                        int -> 12345
+                        long -> 123456789L, cualquier entero demasiado grande ara caber dentri de un int tambien será tomado como long,
+                        unsigned -> implica una constante sin signos 'u' ó 'U'
+                        long undsigned -> 1324556UL
+                        float -> un punto flotante contiene una punto 12.2
+                        exponente -> una constante con un exponente 'le-2'
+                    </p>
+                </div>
+            </div>
+        </div>
 
-        <h3>Constantes</h3>
-        <p>
-            int -> 12345
-            long -> 123456789L, cualquier entero demasiado grande ara caber dentri de un int tambien será tomado como long,
-            unsigned -> implica una constante sin signos 'u' ó 'U'
-            long undsigned -> 1324556UL
-            float -> un punto flotante contiene una punto 12.2
-            exponente -> una constante con un exponente 'le-2'
-        </p>
-    </div>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">  
+                <div class="conteiner-curso__content-text">
+                    <h3>Operaciones aritmeticas, relaciones y logicas</h3>
+                    <p>los operadores aritmeticos binarios son: + suma, - resta, * producto, % modulo devuelve el residuo entre la division entre dos numeros.</p>
+                    <p>Operdores de relacion: < <= > >=, == != </p>
+                    <p>Operador de incremento: ++ (agrega 1 a su operando),  ++n (se incremente en n), n++ (se incrementa en n)</p>
+                    <p>Todas las Variables deben ser declaradas antes de su uso, una declaracion especifica un tipo, y contiene una lista de una o más variables de ese tipo</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        int lower, upper, step; <br>
+                        char c, line [100]; <br>
+                        Esto tambien puede ser escrita de la forma <br>
+                        int lower; <br>
+                        int upper; <br>
+                        int step; <br>
+                        char c; <br>
+                    </code>
 
-    <div class="curso_info_div">
-        <h3>Declaraciones</h3>
-        <p>
-            Todas las Variables deben ser declaradas antes de su uso, una declaracion especifica un tipo, y contiene una lista de una o más variables de ese tipo <br>
-            int lower, upper, step; <br>
-            char c, line [100]; <br>
-            Esto tambien puede ser escrita de la forma <br>
-            int lower; <br>
-            int upper; <br>
-            int step; <br>
-            char c; <br>
-            char line[100]
-        </p>
-    </div>
-    
-    <div class="curso_info_div">
-        <h3>Operaciones aritmeticas, relaciones y logicas</h3>
-        <p>los operadores aritmeticos binarios son: + suma, - resta, * producto, % modulo devuelve el residuo entre la division entre dos numeros.</p>
-        <p>Operdores de relacion: < <= > >=, == != </p>
-        <p>Operador de incremento: ++ (agrega 1 a su operando),  ++n (se incremente en n), n++ (se incrementa en n)</p>
-    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">  
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        if (expresion){
+                            proposición1;
+                        }
+                        else{
+                            proposición2;
+                        }
+                    </code>                
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <h3>Proposiciones y bloques</h3>
+                    <p>Una expresión como x = 0, i++, printf(...), va seguida de un punto y coma ";". Las llaves "{" y "}" se utilizan para agrupar declaraciones dentro de una proposicón compiesya o bloque. veremos las más comunes.</p>
+                    <p>if-else, se una para decisiones, la sintaxis es:</p>
+                </div>
+            </div>
+        </div>
 
-    <h2>Control de flujo</h2>
-    
-    <div class="curso_info_div">
-        <h3>Proposiciones y bloques</h3>
-        <p>Una expresión como x = 0, i++, printf(...), va seguida de un punto y coma ";". Las llaves "{" y "}" se utilizan para agrupar declaraciones dentro de una proposicón compiesya o bloque. veremos las más comunes.</p>
-        <p>if-else, se una para decisiones, la sintaxis es:</p>
-        <code>
-            <pre>
-            if (expresion){
-                proposición1;
-            }
-            else{
-                proposición2;
-            }
-            </pre>
-        </code>
-        <p>Else-if: Esta secuencua de proposiciones if es la forma más general de escribir una desición mútiple, la expresión se evalua en orden, de acuerdo a la verdadera.</p>
-        <code>
-            <pre>
-            if (expresión){
-                proposición;
-            } else if (expresión){
-                proposición;
-            } ... {
-                ...;
-            } else {
-                proposición;
-            }
-            </pre>
-        </code>
-        <p>Switch: Es una decisión multiple que prueba si una expresión coincide con uno de un número de valores constantes enteros. Cada case se etiqueta con uno o más valores constantes enteros o expresiones constantes enteras</p>
-        <code>
-            <pre>
-            switch (expresión){
-                case exp-const: proposiciones
-                    break;
-                case exp-const: proposiciones
-                    break;
-                default: proposiciones
-                    break;
-            }
-            </pre>
-        </code>
-        <p>Ciclos-while: si es diferente de cerp, se ejecuta la proposición y se reevalúa la expresión. Este ciclo continua hasta que la expresión se hace cero. La estructura formal del while es while:</p>
-        <code>
-            <pre>
-            while (expresión){
-                prpposición
-            }
-            </pre>
-        </code>
-        <p>Ciclo-for: Es la forma caracteristca de procesar los primero n elementos de un arreglo en C, </p>
-        <code>
-            <pre>
-            for (i=0; i < n; i++){
-                proposiciones
-            }
-            </pre>
-        </code>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">  
+                <div class="conteiner-curso__content-text">
+                    <p>Else-if: Esta secuencua de proposiciones if es la forma más general de escribir una desición mútiple, la expresión se evalua en orden, de acuerdo a la verdadera.</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        if (expresión){
+                            proposición;
+                        } else if (expresión){
+                            proposición;
+                        } ... {
+                            ...;
+                        } else {
+                            proposición;
+                        }
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">  
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        switch (expresión){
+                            case exp-const: proposiciones
+                                break;
+                            case exp-const: proposiciones
+                                break;
+                            default: proposiciones
+                                break;
+                        }
+                    </code>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <p>Switch: Es una decisión multiple que prueba si una expresión coincide con uno de un número de valores constantes enteros. Cada case se etiqueta con uno o más valores constantes enteros o expresiones constantes enteras</p>
+                </div>
+            </div>
+        </div>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">  
+                <div class="conteiner-curso__content-text">
+                    <p>Ciclos-while: si es diferente de cerp, se ejecuta la proposición y se reevalúa la expresión. Este ciclo continua hasta que la expresión se hace cero. La estructura formal del while es while:</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        while (expresión){
+                            prpposición
+                        }
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">  
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        for (i=0; i < n; i++){
+                            proposiciones
+                        }
+                    </code>                
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <p>Ciclo-for: Es la forma caracteristca de procesar los primero n elementos de un arreglo en C, </p>
+                </div>
 
-        <p>Ciclo do-while<: prueba al final después de realizar cada paso a través del cuerpo del ciclo, el cual se ejecuta siempre por lo menos una vez./p>
-        <code>
-            <pre>
-            do 
-                proposicion
-            while (expresion);
-            </pre>
-        </code>
-        <p>Break y continue: una forma de abandornar el ciclo que no sea por el inicio o final. La proposición continue provoca que inicie la siguiente itaración del ciclo for, while o do que la contiene (no valido para switch).</p>
-
-            
+            </div>
+        </div>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">  
+                <div class="conteiner-curso__content-text">
+                    <p>Ciclo do-while<: prueba al final después de realizar cada paso a través del cuerpo del ciclo, el cual se ejecuta siempre por lo menos una vez./p>
+                    <p>Break y continue: una forma de abandornar el ciclo que no sea por el inicio o final. La proposición continue provoca que inicie la siguiente itaración del ciclo for, while o do que la contiene (no valido para switch).</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        do 
+                            proposicion
+                        while (expresion);
+                    </code>
+                </div>
+            </div>
+        </div>
     </div>
 
     <h2>APUNTADORES Y ARREGLOS</h2>

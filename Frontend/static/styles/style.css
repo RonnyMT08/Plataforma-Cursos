@@ -455,18 +455,13 @@ CONTENEDOR DE CURSOS
 INFORMACION CUSOS
 ****************************/
 .curso_info {
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 4rem 0rem 2rem 0rem;
-}
-
-.curso_info h2 {
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    border-radius: 1rem;
+    margin: 0rem 4rem;
 }
 
 .curso_info ol {
@@ -573,15 +568,18 @@ path {
 }
 
 .contenedor-fundamentos__curso{
-    background-color: transparent;
+    width: 100%;
     margin: 2rem 0rem 0rem 0rem;
 }
 
 
 .contenedor-fundamentos__curso h2{
-    color: white;
+    background-color: yellow;
+    display: flex;
     text-decoration: underline;
-    background-color: transparent;
+    margin: 0rem 3rem;
+    padding: 0rem 1rem;
+    border-radius: 0.5rem;
 }
 
 .conteiner-curso {
@@ -608,14 +606,12 @@ path {
 }
 
 .conteiner-curso__content-text{
-    color: #ffeb54;
     width: 50%;
     margin: 0rem 4rem;
     padding: 0rem 1rem;
 }
 
 .conteiner-curso__content-code{
-    color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -623,6 +619,12 @@ path {
     margin: 0rem 4rem;
     padding: 1rem;
     border-radius: 2rem;
+}
+
+.conteiner-curso__content-code code {
+    background-color: chocolate;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
 }
 
 
