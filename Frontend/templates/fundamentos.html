@@ -38,19 +38,21 @@
             <div class="conteiner-curso__content">                
                 <div class="conteiner-curso__content-text">
                     <h3>Hola Mundo en C</h3>
-                    <p>Todo programa da inicio en su ejecución con un "main" como parte principal del programa. </p>
-                    <p>Al inicio incluimos un "#include ...", indica al compilador que debe incluir informacion acerca de la biblioteca de entrada y salida en C.</p>
-                    <p>En este caso la funcion "prinft" tiene el argumento "hola mundo\n" el cual es el texto que se llegara a mostrar, la secuencia "\n" representa el caracter de la una nueva linea.</p>
-                    <p>La forma de ejecutar un programa en C depende el sistema que se esté utilizando, una de las formas mas comunes es ".c", Ejemplo con un programa llamado hola.c</p>
-                    <p>Para la compilación del codigo "gcc hola.c", y se puede ejecutar con "./hola".</p>   
+                    <p>Todo programa debe dar inicio a su ejecución con la función "main" que debe devolver un número entero. A este se lo denomina función principal</p>
+                    <p>Al principio del archivo declaramos un "#include ..." que indica al compilador que debe incluir información acerca de la biblioteca de entrada y salida en C.</p>
+                    <p>La función "prinft" tiene el argumento "hola mundo\n" el cual es el texto que se llegará a mostrar, la secuencia "\n" representa el caracter de la una nueva linea.</p>
+                    <p>La forma de ejecutar un programa en C depende el sistema que se esté utilizando. Para la compilación del codigo "gcc hola.c", y se puede ejecutar con "./hola".</p>
                 </div>
                 <div class="conteiner-curso__content-code">
                     <code>
-                        #include &lt;stdio.h><br>
-                        int main (){<br>
-                        &nbsp;&nbsp;&nbsp;printf("Hola mundo\n");<br>
-                        &nbsp;&nbsp;&nbsp;return 0;<br>
-                        }<br>
+                        <ol>
+                            <li>#include &lt;stdio.h></li>
+                            <li></li>
+                            <li>int main(){</li>
+                            <li>&nbsp;&nbsp;printf("Hola mundo\n");</li>
+                            <li>&nbsp;&nbsp;return 0;</li>
+                            <li>}</li>
+                        </ol>
                     </code>
                 </div>
             </div>
@@ -60,36 +62,33 @@
             <div class="conteiner-curso__content">
                 <div class="conteiner-curso__content-code">
                     <code>
-                        int edad, anio, mes, dia; <br>
-                        char Letra; <br>
-                        
-                        char caracter 1byte <br>
-                        short entero corto <br>
-                        long entero largo <br>
-                        double punto flotante de doble presición <br>
-                        
-                        %d escribe como entero decimal <br>
-                        %6d escribe como entero decimal, por lo menos con 6 caracteres de amplitud <br>
-                        %f escribe como punto flotante <br>
-                        %6f escribe como punto flotante, por lo menos con 6 caracteres de amplitud <br>
-                        %.2f escribe como punto flotante, con 2 caracteres después del punto decimal <br>
-                        %6.2f escribe como punto flotante, por lo menos con 6 caracteres de ancho y 2 después del punto decimal. <br>
+                        <ol>
+                            <li>char /*caracter 1byte*/</li>
+                            <li>short /*entero corto*/</li>
+                            <li>long /*entero largo*/</li>
+                            <li>double /*punto flotante*/</li>
+                            <li></li>
+                            <li>int edad, anio, mes, dia;</li>
+                            <li>char letra;</li>
+                            <li></li>
+                            <li>%d /*escribe como entero decimal*/</li>
+                            <li>%6d /*escribe como entero decimal, por lo menos con 6 caracteres de amplitud*/</li>
+                            <li>%f /*escribe como punto flotante*/</li>
+                            <li>%6f /*escribe como punto flotant, por lo menos con 6 caracteres de amplitud*/</li>
+                            <li>%.2f /*escribe como punto flotante, con 2 cracteres después del punto decimal*/</li>
+                            <li>%6.2f /*escribe como punto flotante, por los menos con 6 caracteres de ancho y 2 después del punto decimal*/</li>
+                        </ol>
                     </code>
                 </div>
                 
                 <div class="conteiner-curso__content-text">
                     <h3>Variables</h3>
-                    <p>En C, se deben decalrar todas las variables antes de su uso, generamente al principio de la función.</p>
-                    <p>Una declaración otifica las propiedades de una variable, consra de un nombre de tipo y de una lista de variables.</p>
-                    <p>int representa a número enteros, float es u punto flotante es decir que pueden tener parte fraccionaria. <br>
-                        generalmente los int son de 16bits de rango, entre -32768 y + 32767, un punto flotante es de 32bits, por lo menos 6 digitos significativos y una magnitud de 10(-38).</p>
-                    <p>Tambien se cuenta con varicos tipos de datos básicos:</p>
-                    <p>Algunas formas de mostrart número son:</p>
+                    <p>En C, se deben declarar todas las variables antes de su uso, generamente al principio de la función.</p>
+                    <p>Una declaración justifíca las propiedades de una variable esta consta de un nombre de tipo y de una lista de variables.</p>
+                    <p>int representa a número enteros, float es un punto flotante es decir que pueden tener parte fraccionaria, generalmente los int son de 16bits de rango, entre -32768 y + 32767, un punto flotante es de 32bits, por lo menos 6 digitos significativos y una magnitud de 10(-38).</p>
+                    <p>Algunas formatos de impresion son con el signo porcentaje seguido del fomrato "%".</p>
                 </div>
             </div>
-        </div>
-
-        <div class="conteiner-curso">
             <div class="conteiner-curso__content">
                 <div class="conteiner-curso__content-text">
                     <h3>Constantes simbólicas</h3>
@@ -97,40 +96,40 @@
                 </div>
                 <div class="conteiner-curso__content-code">
                     <code>
-                        #include < stdio.h> <br>
-                        #define EDAD 25 <br>
-                        #define MES 8 <br>
-                        #define DIA 21 <br>
+                        <ol>
+                            <li>#include &ltstdio.h></li>
+                            <li></li>
+                            <li>#define EDAD 25</li>
+                            <li>#define MES "Agosto"</li>
+                            <li>#define DIA 21</li>
+                        </ol>
                     </code>
                 </div>
             </div>
-        </div>
-    
-        <div class="conteiner-curso">
             <div class="conteiner-curso__content">
                 <div class="conteiner-curso__content-code">
                     <code>
-                        /* <br>
-                        Precodciones: exponente >= 0 <br>
-                        Postcondiciones: eleva la base a la n-ésima potencia. <br>
-                        */ <br>
-                        int numero_cuadrado(int base, int exponente){ <br>
-                        &nbsp;&nbsp;&nbsp;int p; <br>
-                            
-                        &nbsp;&nbsp;&nbsp;for (p = 1; n > 0; --n){ <br> 
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p = p * base; <br>
-                        &nbsp;&nbsp;&nbsp;} <br>
-                        &nbsp;&nbsp;&nbsp;return p; <br>
-                        } <br>
-                        
-                        int main(){ <br>
-                        &nbsp;&nbsp;&nbsp;int numero_cuadrado(int, int);<br>
-                        } <br>
+                        <ol>
+                            <li>/*Precondiciones: exponente >= 0</li>
+                            <li>Postcondiciones: eleva la base a la n-ésima potencia*/</li>
+                            <li>int numero_cuardrao(int base, int exponente){</li>
+                            <li>&nbsp;&nbsp;int p;</li>
+                            <li>&nbsp;&nbsp;for (p = 1; n > 0; --n){</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;p = p * base;</li>
+                            <li>&nbsp;&nbsp;}</li>
+                            <li>&nbsp;&nbsp;return p;</li>
+                            <li>}</li>
+                            <li></li>
+                            <li>int main(){</li>
+                            <li>&nbsp;&nbsp;numero_cuadrado(int , int);</li>
+                            <li>&nbsp;&nbsp;return 0;</li>
+                            <li>}</li>
+                        </ol>
                     </code>
                 </div>
                 <div class="conteiner-curso__content-text">
                     <h3>Funciones</h3>
-                    <p>Una función es proporcional a una subrutina, proporcina una forma conveniente de encaosial algunos cálculos, que se pueden emplear posteriormente.</p>
+                    <p>Una función es proporcional a una subrutina, proporcina una forma conveniente de manejar algunos cálculos, que se pueden emplear posteriormente.</p>
                     <p>Una función tiene la forma de: "tipo-de-retorno nombre-de-la-función (parametros) { cuerpo }" </p>
                     <p>Posteriormente lo podesmos llamar o hacer uso del mismo dentro del main</p>
                 </div>
@@ -868,8 +867,5 @@
             </div>
         </div>
     </div>
-
-    <h2>LA INTERFAZ CON EL SISTEMA UNIX</h2>
-    <p></p>
 </div>
 {% endblock %}

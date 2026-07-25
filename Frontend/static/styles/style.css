@@ -469,19 +469,6 @@ INFORMACION CUSOS
     margin: 0rem;
 }
 
-.curso_info li {
-    margin: 1rem 0rem;
-}
-
-.curso_info pre {
-    display: flex;
-    margin-block: 0px;
-}
-
-.curso_info code {
-    margin: 0px;
-}   
-
 .curso_info_div {
     background-color: #ffd9b9;;
     display: flex;
@@ -574,11 +561,11 @@ path {
 
 
 .contenedor-fundamentos__curso h2{
-    background-color: yellow;
+    background: linear-gradient(45deg, white, var(--primary-color));
     display: flex;
     text-decoration: underline;
     margin: 0rem 3rem;
-    padding: 0rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 0.5rem;
 }
 
@@ -610,6 +597,15 @@ path {
     margin: 0rem 4rem;
     padding: 0rem 1rem;
 }
+.conteiner-curso__content-text h3{
+    background-color: var(--color-back);
+    width: auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 0.3rem 2rem;
+    border-radius: 10px;
+}
 
 .conteiner-curso__content-code{
     display: flex;
@@ -622,7 +618,7 @@ path {
 }
 
 .conteiner-curso__content-code code {
-    background-color: chocolate;
+    background-color: var(--primary-color);
     padding: 1rem 3rem;
     border-radius: 0.5rem;
 }
