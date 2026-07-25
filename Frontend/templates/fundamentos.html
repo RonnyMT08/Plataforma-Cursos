@@ -87,6 +87,7 @@
                     <p>Algunas formas de mostrart número son:</p>
                 </div>
             </div>
+        </div>
 
         <div class="conteiner-curso">
             <div class="conteiner-curso__content">
@@ -133,6 +134,7 @@
                     <p>Una función tiene la forma de: "tipo-de-retorno nombre-de-la-función (parametros) { cuerpo }" </p>
                     <p>Posteriormente lo podesmos llamar o hacer uso del mismo dentro del main</p>
                 </div>
+            </div>
         </div>
     </div>
 
@@ -317,234 +319,238 @@
             </div>
         </div>
     </div>
+    <div class="contenedor-fundamentos__curso">
+        <h2>APUNTADORES Y ARREGLOS</h2>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <h3>Apuntadores y direcciones</h3>
+                    <p>Un puntero es una variable que contiene la direccion de una variable....</p>
+                    <p>Dado un arreglo de celdas de memoria numeradas o direccionadas consecutivamente que se puede manipular individualmente o en grupos contiguos. Ahora con p un puntero que apunta a un chart.con el operador unario "&" se da la dirección de un objeto, de modo que la proposición.</p>
+                    <p>Asigna la dirección de c a la variable p, y se dice que p apunta a "c". El operador & sólo aplica a objetos que están en memoria. EL operador unario "*" es el operador de indireccion p desreferencia, cuando se aplica un apuntador, da acceso al objeto al que señala al apuntador.</p>
+                    <p>si ip apunra al entero x, entonces *ip puede presentarse en cualquier contexto donde x pueda hacerlo, asi que</p>
+                    <p>Los operadores narios * y & se ligan más estrechamente que los operadores arimeticos, asi.</p>
+                    <p>por último, puesto que los apuntadores son variables, se puede emplear sin desreferaciaminento, por ejemplo, si iq es otro apuntador a int, iq = ip, copia el contenido de ip en iq; asi, hace que iq apunte a los que ip está apuntando.</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        p = &c;
+        
+                        int x = 1, y = 2, z[10];
+                        int *ip; /*ip es un puntero a int */
+        
+                        ip = &x; /*ip ahora apunta a x*/
+                        y = &x /*y es ahora 1*/
+                        *ip = 0; /*c es ahora 0*/
+                        ip = &z[0]; /*ip ahora apunta a z[0]*/
 
-    <h2>APUNTADORES Y ARREGLOS</h2>
-    
-    <div class="curso_info_div">
-        <p>Un puntero es una variable que contiene la direccion de una variable....</p>
-        <h3>Apuntadores y direcciones</h3>
-        <p>Dado un arreglo de celdas de memoria numeradas o direccionadas consecutivamente que se puede manipular individualmente o en grupos contiguos. Ahora con p un puntero que apunta a un chart.con el operador unario "&" se da la dirección de un objeto, de modo que la proposición.</p>
-        <code>
-            <pre>
-            p = &c;
-            </pre>
-        </code>
-        <p>Asigna la dirección de c a la variable p, y se dice que p apunta a "c". El operador & sólo aplica a objetos que están en memoria. EL operador unario "*" es el operador de indireccion p desreferencia, cuando se aplica un apuntador, da acceso al objeto al que señala al apuntador.</p>
-        <code>
-            <pre>
-            int x = 1, y = 2, z[10];
-            int *ip; /*ip es un puntero a int */
+                        *ip = *ip +10
 
-            ip = &x; /*ip ahora apunta a x*/
-            y = &x /*y es ahora 1*/
-            *ip = 0; /*c es ahora 0*/
-            ip = &z[0]; /*ip ahora apunta a z[0]*/
-            </pre>
-        </code>
-        <p>si ip apunra al entero x, entonces *ip puede presentarse en cualquier contexto donde x pueda hacerlo, asi que</p>
-        <pre>
-            <code>
-            *ip = *ip +10
-            </code>
-        </pre>
-        <p>Los operadores narios * y & se ligan más estrechamente que los operadores arimeticos, asi.</p>
-        <pre>
-            <code>
-            y = *ip + 1 /*toma aquello que apunte a ip, le agrega 1 y asigna el resultado a y*/
-            *ip += 1 /*incrementa en uno aquello que ip apunta*/
-            ++ *ip
-            (*ip)++
-            </code>
-        </pre>
-        <p>por último, puesto que los apuntadores son variables, se puede emplear sin desreferaciaminento, por ejemplo, si iq es otro apuntador a int, iq = ip, copia el contenido de ip en iq; asi, hace que iq apunte a los que ip está apuntando.</p>
-    </div>
+                        y = *ip + 1 /*toma aquello que apunte a ip, le agrega 1 y asigna el resultado a y*/
+                        *ip += 1 /*incrementa en uno aquello que ip apunta*/
+                        ++ *ip
+                        (*ip)++
+                    </code>
+                </div>
+            </div>
+        </div>
 
-    <div class="curso_info_div">
-        <h3>Apuntadores y argumentos de funciones</h3>
-        <p>Por defecto C pasa los argumentos de funcones por valor, no existe una forma directa para que la función que se invoca altere una variable de la función que la llama. dado que una función que se pasa solo intercabia copias. Ejemplo</p>
-        <code>
-            <pre>
-            void swap (innt x, int y){
-                int temp;
-                temp = x;
-                x = y;
-                y = temp;
-            }
-            int main() {
-                swap (a, b);
-                return 0;
-            }
-            </pre>
-        </code>
-        <p>La forma de obtener los resutados que se desean es qe el programa invocador pase por punteros los valores que se cambiarán, Puesto que el operador & produce la dirección de una variable, &a es un apuntador a "a", Ejemplo.</p>
-        <code>
-            <pre>
-            void swap(int *px, int *py){
-                int temp;
-                temp = *px;
-                *px = *py;
-                *py = temp;
-            }
-            int main() {
-                swap (&a, &b);
-                return 0;
-            }
-            </pre>
-        </code>
-    </div>
-    
-    <div class="curso_info_div">
-        <h3>Apuntadores y arreglos</h3>
-        <p>Cualquier operación entre apuntadores y arreglos puede lograrse por indexación, La declaración es int a[10];, define un arreglo a de tamaño 10, esto es, un bloque de 10 objetos consecusitoc llamadso a[0], a[1],...,a[9]. La notación a[i] se refiere al i-ésimo elemento del arreglo. si pa es un puntero a un entero, declarado como</p>
-        <code>
-            <pre>
-            int *pa; 
-            pa = &a[0]; /*Es la asignación, pa ahora apunta al elemento cero de a, se dice que pa contiene la dirección de a[0]*/
-            </pre>
-        </code>
-        <p>Ahora la asignación x = *pa; copiará el contenido de a[0] en x. Si pa apunta a un elemento en particular de un arreglo, entonces por definición pa + 1 apunta al siguiente element, pa +I apunta i elementos después de pa, y pa-i apunta i elementos antes.</p>
-        <p>Así pa apunta a a[0], *(pa + 1) se refiere al conenido de a[1], pa +i es la dirección de a[i] y *(pa+i) es el contenido de a[i]. Todo lo mencionado es válido sin importar el tipo o tamaño de las variables del arreglo.</p>
-        <code>
-            <pre>
-            imagen  
-            </pre>
-        </code>
-        <p>Por definición el valor de una varible o expresión de tipo arreglo es la dirección del elemento cero del arreglo, así que despues de la asignación pa = &a[0]; pa y a tienen valores idénticos. Puesto que e nombre de un arreglo es un sinónimo para la localidad de elemento incial, la asignación pa = &a[0] puede escribirse también como pa = a; Más sorprendente es el hecho de que una referencia a a[i] tambien puede escribirse como *(a+i).</p>
-        <p>Al evalucar a[i], C la convierte inmediatamente a *(a+i); las dos formas son equivalentes. Al aplicar un operador & a ambas partes de esta se deriva en &A[i] y a+i tambien son identicas, a+++i es la dirección del i-ésimo elemento delante de a, por otra parte si pa es un puntero puede usarse con un subíndice pa[i] es identico a *(pa+i). </p>
-        <p>Existe diferencia entre un nombre de arreglo y un apuntador, que debe tenerse en cuenta. Un apuntador o puntero es una variable, por esto pa = a y pa++ son legales. Pero un nombre de arreglo no es una variable, construcciones como a = pa y a++ son ilegales.</p>
-    </div>
-
-    <div class="curso_info_div">
-        <h3>Apuntadores a caracterees, y funciones</h3>
-        <p>Una cosntante de cadena escrita como "Soy una cadena" es un arreglo de caracteres que termina con un carácter nulo "\0", de tal manera que los programas puedan encontrar el fin. La longitud de alamacenamiento es así uno más que el número de caracteres entre las comillas.</p>
-        <p>Cuando una cadena de caracteres como está aparece en un programa, el acceso a ella es atraves de un puntero a caracteres.</p>
-        <p>Las cadenas constanres no necesitan ser argumentos de funciones. Si pmensaje se declara como: char *pmensaje; entonces la proposición pmensaje = "ya es el tiempo"; se asigna a pmesanje un puntero al arreglo de caracteres. Esta no es la copia de una cadena; solo concierne a punteros.</p>
-        <code>
-            <pre>
-            char amensaje[] = "ya es el tiempo"; /*arreglo*/
-            char *pmensaje = "ya es el tiempo"; /*apuntador*/
-            </pre>
-        </code>
-        <p>amensaje es un arreglo suficientemente grande como para contene la secuencia de caracteres y el "\0" que lo inicializa. por otro lado pmensaje es un puntero, incializado para apuntar a una cadena constante; el puntero puede modificarse posteriormente para qu apunte a algún otro lado. el resultado es indefinido si se trata de modificar el contenido de la cadena.</p>
-        <p>La primera función es strcpy(s,t), que copia la cadena t a la cadena s. Sería agradable dedir simplemente s=t, pero esto copia el apuntador, no los caracteres. Para copiar los caracteres requiere de un ciclo. Primero está la version con un arrreglo, luego con apuntadores.</p>
-        <code>
-            <pre>
-            void strcopy(char *s, chat *t){
-                int i;
-                i = 0;
-                while ((s[i] = t[i]) != '\0')
-                    i++;
-            }
-
-            void strcopy(char *s, char *t){
-                while ((*s == *t) = '\0'){
-                    s++;
-                    t++;
-                }
-            }
-            </pre>
-        </code>
-        <p>Ahora examinaremos con strcmp(s,t) que compara las caenas de caracteres sy t, y regresa un valor negativo, cero o positivo si s es la lexicográficamente menor que, igual a, o mayor que t. El valor se obtiene al resto los caracteres de la primera posicion en que s y t no coinciden.</p>
-            <code>
-                int strcmp(char *s, char *t){
-                    for (i = 0; s[i] == t[i]; i++){
-                        if (s[i] == '\0'){
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        void swap (innt x, int y){
+                            int temp;
+                            temp = x;
+                            x = y;
+                            y = temp;
+                        }
+                        int main() {
+                            swap (a, b);
                             return 0;
                         }
-                    }
-                    return s[i] - t[i];
-                }
-
-                int strmp(char *s, char *t){
-                    for ( ; *s == *t; s++, t++){
-                        if (*s == '\0'){
+                        
+                        void swap(int *px, int *py){
+                            int temp;
+                            temp = *px;
+                            *px = *py;
+                            *py = temp;
+                        }
+                        int main() {
+                            swap (&a, &b);
                             return 0;
                         }
-                    }
-                    return *s -*t;
-                }
-            </code>
-            <p>Puesto que ++ y -- son operadores prefijos o posfijos, se presentan otras combinaciones de *, ++ , aun que con menos frecuencia. Por ejemplo *--p disminuye p antes de traer el caraácter al que apunta.</p>
-            <code>
-                <pre>
-                    *p++ = val; /*mete val en la pila*/
-                    val = *--p; /*saca el tope de la pila y lo pone en val*/
-                </pre>
-            </code>
+                    </code>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <h3>Apuntadores y argumentos de funciones</h3>
+                    <p>Por defecto C pasa los argumentos de funcones por valor, no existe una forma directa para que la función que se invoca altere una variable de la función que la llama. dado que una función que se pasa solo intercabia copias. Ejemplo</p>
+                    <p>La forma de obtener los resutados que se desean es qe el programa invocador pase por punteros los valores que se cambiarán, Puesto que el operador & produce la dirección de una variable, &a es un apuntador a "a", Ejemplo.</p>
+                </div>
+            </div>
+        </div>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <h3>Apuntadores y arreglos</h3>
+                    <p>Cualquier operación entre apuntadores y arreglos puede lograrse por indexación, La declaración es int a[10];, define un arreglo a de tamaño 10, esto es, un bloque de 10 objetos consecusitoc llamadso a[0], a[1],...,a[9]. La notación a[i] se refiere al i-ésimo elemento del arreglo. si pa es un puntero a un entero, declarado como</p>
+                    <p>Ahora la asignación x = *pa; copiará el contenido de a[0] en x. Si pa apunta a un elemento en particular de un arreglo, entonces por definición pa + 1 apunta al siguiente element, pa +I apunta i elementos después de pa, y pa-i apunta i elementos antes.</p>
+                    <p>Así pa apunta a a[0], *(pa + 1) se refiere al conenido de a[1], pa +i es la dirección de a[i] y *(pa+i) es el contenido de a[i]. Todo lo mencionado es válido sin importar el tipo o tamaño de las variables del arreglo.</p>
+                    <p>Por definición el valor de una varible o expresión de tipo arreglo es la dirección del elemento cero del arreglo, así que despues de la asignación pa = &a[0]; pa y a tienen valores idénticos. Puesto que e nombre de un arreglo es un sinónimo para la localidad de elemento incial, la asignación pa = &a[0] puede escribirse también como pa = a; Más sorprendente es el hecho de que una referencia a a[i] tambien puede escribirse como *(a+i).</p>
+                    <p>Al evalucar a[i], C la convierte inmediatamente a *(a+i); las dos formas son equivalentes. Al aplicar un operador & a ambas partes de esta se deriva en &A[i] y a+i tambien son identicas, a+++i es la dirección del i-ésimo elemento delante de a, por otra parte si pa es un puntero puede usarse con un subíndice pa[i] es identico a *(pa+i). </p>
+                    <p>Existe diferencia entre un nombre de arreglo y un apuntador, que debe tenerse en cuenta. Un apuntador o puntero es una variable, por esto pa = a y pa++ son legales. Pero un nombre de arreglo no es una variable, construcciones como a = pa y a++ son ilegales.</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        int *pa; 
+                        pa = &a[0]; /*Es la asignación, pa ahora apunta al elemento cero de a, se dice que pa contiene la dirección de a[0]*/
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <h3>Apuntadores a caracterees, y funciones</h3>
+                    <p>Una cosntante de cadena escrita como "Soy una cadena" es un arreglo de caracteres que termina con un carácter nulo "\0", de tal manera que los programas puedan encontrar el fin. La longitud de alamacenamiento es así uno más que el número de caracteres entre las comillas.</p>
+                    <p>Cuando una cadena de caracteres como está aparece en un programa, el acceso a ella es atraves de un puntero a caracteres.</p>
+                    <p>Las cadenas constanres no necesitan ser argumentos de funciones. Si pmensaje se declara como: char *pmensaje; entonces la proposición pmensaje = "ya es el tiempo"; se asigna a pmesanje un puntero al arreglo de caracteres. Esta no es la copia de una cadena; solo concierne a punteros.</p>
+                    <p>amensaje es un arreglo suficientemente grande como para contene la secuencia de caracteres y el "\0" que lo inicializa. por otro lado pmensaje es un puntero, incializado para apuntar a una cadena constante; el puntero puede modificarse posteriormente para qu apunte a algún otro lado. el resultado es indefinido si se trata de modificar el contenido de la cadena.</p>
+                    <p>La primera función es strcpy(s,t), que copia la cadena t a la cadena s. Sería agradable dedir simplemente s=t, pero esto copia el apuntador, no los caracteres. Para copiar los caracteres requiere de un ciclo. Primero está la version con un arrreglo, luego con apuntadores.</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        char amensaje[] = "ya es el tiempo"; /*arreglo*/
+                        char *pmensaje = "ya es el tiempo"; /*apuntador*/
+                        void strcopy(char *s, chat *t){
+                        int i;
+                        i = 0;
+                        while ((s[i] = t[i]) != '\0')
+                            i++;
+                        }
+
+                        void strcopy(char *s, char *t){
+                            while ((*s == *t) = '\0'){
+                                s++;
+                                t++;
+                            }
+                        }
+                    </code>
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        int strcmp(char *s, char *t){
+                            for (i = 0; s[i] == t[i]; i++){
+                                if (s[i] == '\0'){
+                                    return 0;
+                                }
+                            }
+                            return s[i] - t[i];
+                        }
+
+                        int strmp(char *s, char *t){
+                            for ( ; *s == *t; s++, t++){
+                                if (*s == '\0'){
+                                    return 0;
+                                }
+                            }
+                            return *s -*t;
+                        }
+
+                        *p++ = val; /*mete val en la pila*/
+                        val = *--p; /*saca el tope de la pila y lo pone en val*/
+                    </code>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <p>Ahora examinaremos con strcmp(s,t) que compara las caenas de caracteres sy t, y regresa un valor negativo, cero o positivo si s es la lexicográficamente menor que, igual a, o mayor que t. El valor se obtiene al resto los caracteres de la primera posicion en que s y t no coinciden.</p>
+                    <p>Puesto que ++ y -- son operadores prefijos o posfijos, se presentan otras combinaciones de *, ++ , aun que con menos frecuencia. Por ejemplo *--p disminuye p antes de traer el caraácter al que apunta.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <h3>Arreglos de apuntadores; apunteros a punteros</h3>
+                    <p>Si las líneas que se van a ordenar se almacenan juntas en un gran arreglo de caracteres, entonces se puede tener acceso a cada linea por medio de un apuntador a su primer carácter. por su lado, los apuntadores se pueden alamcenar en un arreglo. Dos lineas se pueden comparar pasando sus punteros a strcmp. Cuando dos lienas desordenadas tienen que intercambiarse, se intercambian los apuntadores en el arreglo de apuntadores, no las líneas de texto.</p>
+                    <p>Esto elimina el doble problema de un manejo complicado de almacenamiento y exceso de procesamiento que se produciría al mover las lineas. Veremos el proceso de ordenamiento tiene tres pasos. Primero veremmos las estructuras de datos y la entrada y salida.</p>
+                    <p>La rutina de entreda tiene que reunir y guardar los caracteres de cada línea, y contruir un arreglo de apuntadores hacia las líneas. Tambien debe contar el número de líneas de entrada, puesto que esa información se requiere para el ordenamiento y la impresión. DEbido a que la funcion de entrada sólo puede tratar con número fino de líneas, puede regresar alguna cuenta de líneas ilegal, como -1, si se presenta demasiado texto a la entrada.</p>
+                    <p>La rutina de salida sólo tiene que imprimir las líneas en el orden en que aparecen en el arreglo de apuntadores.</p>
+                </div>
+                              <div class="conteiner-curso__content-code">
+                    
+                    <code>
+                        #include < stdio.h>
+                        #include < string.h>
+
+                        #define MAXLINES 5000 /*max # de lineas por ordenar*/
+                        char *lineaptr[MAXLINES]; /*apuntadores a lineas de texto*/
+                        int readlines(char *lineptr[], int nlines);
+                        void writelines(char *lineptr[], int nlines);
+
+                        void qsort(char *lineptr[], int left, int right);
+
+                        main(){
+                            int nlines; /*número de lineas de entrada leídas*/
+                            if ((nlines = readlines(lieptr, MAXLINES)) > = 0){
+                                qsort(lineptr, 0, nlines);
+                                return 0;
+                            } else {
+                                printf("error: entrada demasiado grande para ordenarla\n");
+                                return 1;
+                            }
+                        }
+                        #define MAXLEN 1000 /*max longitud de cualquier linea de entrada*/
+                        int getline(char*, int);
+                        char *alloc(int);
+
+                        int readlines(char *lineptr[], int maxlines){
+                            int len, nlines;
+                            char *p, line[MAXLEN];
+
+                            nlines = 0;
+                            while ((len = getline(line, MAXLEN)) > 0){
+                                if (nlines >= maxlines || (p = alloc(len)) == NULL){
+                                    return -1;
+                                } else {
+                                    line[len-1] = '\0'; /*elimina carácter nuevo linea*/
+                                    strcpy(p, line);
+                                    lineptr[nlines++] = p;
+                                }
+                            }
+                            return nlines;
+                        }
+
+                        void writelines(char *lineptr[], int nlines){
+                            int i;
+                            for (i = 0; i < nlines; i++){
+                                printf("%s\n", lineptr[i]);
+                            }
+                        }
+                    </code>
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        void writelines(char *lineptr[], int nlines){
+                            while (nlines -- > 0){
+                                printf("%s\n", *lineptr++);
+                            }
+                        }
+                    </code>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <p>El principal nuevo elemento es la declaración para linptr, que indica que lineptr es un arreglo de MAXLINES elementos, cada uno de los cuales es un apuntador a char, Esto es, lineptr[i] es un apuntador a carácter, y *lineptr[i] es el carácter al que apunta, el primer carácter de la i-ésima linea de texto almacenada.</p>
+                    <p>Puesto que lineptr es por si mismo el nombre de un arreglo, puede tratarse como un apuntador en la misma forma que en nuestros ejemplos anteriores, y weitelines puede escribirse en su lugar como.</p>
+                    <p>Inicialmente *lineptr aunta a la primera línea; cada incremento lo avanza al siguiente apuntador a línea miestras nlines se disminuye.</p>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="curso_info_div">
-        <h3>Arreglos de apuntadores; apunteros a punteros</h3>
-        <p>Si las líneas que se van a ordenar se almacenan juntas en un gran arreglo de caracteres, entonces se puede tener acceso a cada linea por medio de un apuntador a su primer carácter. por su lado, los apuntadores se pueden alamcenar en un arreglo. Dos lineas se pueden comparar pasando sus punteros a strcmp. Cuando dos lienas desordenadas tienen que intercambiarse, se intercambian los apuntadores en el arreglo de apuntadores, no las líneas de texto.</p>
-        <p>Esto elimina el doble problema de un manejo complicado de almacenamiento y exceso de procesamiento que se produciría al mover las lineas. Veremos el proceso de ordenamiento tiene tres pasos. Primero veremmos las estructuras de datos y la entrada y salida.</p>
-        <p>La rutina de entreda tiene que reunir y guardar los caracteres de cada línea, y contruir un arreglo de apuntadores hacia las líneas. Tambien debe contar el número de líneas de entrada, puesto que esa información se requiere para el ordenamiento y la impresión. DEbido a que la funcion de entrada sólo puede tratar con número fino de líneas, puede regresar alguna cuenta de líneas ilegal, como -1, si se presenta demasiado texto a la entrada.</p>
-        <p>La rutina de salida sólo tiene que imprimir las líneas en el orden en que aparecen en el arreglo de apuntadores.</p>
-        <code>
-            <pre>
-            #include < stdio.h>
-            #include < string.h>
-
-            #define MAXLINES 5000 /*max # de lineas por ordenar*/
-            char *lineaptr[MAXLINES]; /*apuntadores a lineas de texto*/
-            int readlines(char *lineptr[], int nlines);
-            void writelines(char *lineptr[], int nlines);
-
-            void qsort(char *lineptr[], int left, int right);
-
-            main(){
-                int nlines; /*número de lineas de entrada leídas*/
-                if ((nlines = readlines(lieptr, MAXLINES)) > = 0){
-                    qsort(lineptr, 0, nlines);
-                    return 0;
-                } else {
-                    printf("error: entrada demasiado grande para ordenarla\n");
-                    return 1;
-                }
-            }
-            #define MAXLEN 1000 /*max longitud de cualquier linea de entrada*/
-            int getline(char*, int);
-            char *alloc(int);
-
-            int readlines(char *lineptr[], int maxlines){
-                int len, nlines;
-                char *p, line[MAXLEN];
-
-                nlines = 0;
-                while ((len = getline(line, MAXLEN)) > 0){
-                    if (nlines >= maxlines || (p = alloc(len)) == NULL){
-                        return -1;
-                    } else {
-                        line[len-1] = '\0'; /*elimina carácter nuevo linea*/
-                        strcpy(p, line);
-                        lineptr[nlines++] = p;
-                    }
-                }
-                return nlines;
-            }
-
-            void writelines(char *lineptr[], int nlines){
-                int i;
-                for (i = 0; i < nlines; i++){
-                    printf("%s\n", lineptr[i]);
-                }
-            }
-            </pre>
-        </code>
-        <p>El principal nuevo elemento es la declaración para linptr, que indica que lineptr es un arreglo de MAXLINES elementos, cada uno de los cuales es un apuntador a char, Esto es, lineptr[i] es un apuntador a carácter, y *lineptr[i] es el carácter al que apunta, el primer carácter de la i-ésima linea de texto almacenada.</p>
-        <p>Puesto que lineptr es por si mismo el nombre de un arreglo, puede tratarse como un apuntador en la misma forma que en nuestros ejemplos anteriores, y weitelines puede escribirse en su lugar como.</p>
-        <code>
-            <pre>
-            void writelines(char *lineptr[], int nlines){
-                while (nlines -- > 0){
-                    printf("%s\n", *lineptr++);
-                }
-            }
-            </pre>
-        </code>
-        <p>Inicialmente *lineptr aunta a la primera línea; cada incremento lo avanza al siguiente apuntador a línea miestras nlines se disminuye.</p>
-
-    </div>
-    
     <h2>ESTRUCTURAS</h2>
     <div class="curso_info_div">
         <p>Una estructura es una colección de una o más variables, de tipos posiblemente deifernetes, agrupadas bajo un solo nombre para manejo coveniente. Las estructuras ayudan a organizar datos complicados, en particular dentro de programas grandes, debido a que perimten que a un grupo de variables relacionadas se les trate como una unidad en lugar de como entidades separadas.</p>
