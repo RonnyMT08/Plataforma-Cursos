@@ -622,228 +622,251 @@
         </div>
 
     </div>
-    <h2>ENTRADA Y SALIDA</h2>
-    <div class="curso_info_div">
-        <p>Las operaciones de entrada y salida no son en i parte del lenguaje C, por lo que hasta ahora no las hemos destacado. En este capitulo describiremos la biblioteca estándar, un  conjunto de funciones que proporcionan entrada y salida, manipilación de cadenas, manejo de memoria, rutinas matemáticas y una variedad de otros servicios.</p>
-        <h3>Entrada y salida estándar</h3>
-        <p>Cada archivo fuente que se refiera a una función de bibliotea de entrada/salida debe contener la línea #include < stdio.h></p>
-        <p>El mecanismo de enrteda mpas simple es leer un carácter a la vez de la entrada stándar, normalmente el teclado, con getchar. int getchar(void), regresa el siguiene carácter de la entrada cada bez que se invoca, o EOF cuando encuentra fin de archivo. la constante EOF está definicda en stdio.h</p>
-        <p>En muchos ambientes, un archivo puede tomar el lugar del teclado empleando la convencion < (prog < archent) para direccionamiento de entrada: si un programa "prog" usa getchar, entonces la lineda de órdenes provoca que prog lea caracteres de archent. El cambio de la entrada se realiza e tal manera que prog mismo es ajeno al cambio; en particular, la cadena "< archent" no está incluida entre los argumnetos de la línea de órdenes en argv.</p>
-        <p>El cambio de la entrada es también visible si la entrada viene de otro programa via un mecanismo de interconexion(pipe) otroprog | prog, esto ejecuta tanto al programa otroprog como a prog, e interconecta la salida estandar de otroprog con la entrada stándar para prog.</p>
-        <p>La función putchar(int) se emplea par salida, coloca el carácter c en la salida estándar qie por omisión es la pantalla, regresa el carácter escrito, o EOF si ocurre algún error. La salida puede ser digitada hacia algún archivo con > nombrearch, si prog utiliza putchar (prog > archsal). Si se permite la interconexión prog | otroprog, deja la salida estándar de prog en la entrada estándar de otroprog.</p>
-        <p>La salida producda por printf tambien encuentra su salida estandar. Las llamadas a putchar a printf pueden estar traslapadas - la salida aparace en el orden en que se hicieron las llamadas.</p>
-        <code>
-            <pre>
-            #include < stdio.h>
-            #include < ctype.h>
+    <div class="contenedor-fundamentos__curso">
 
-            main(){
-                int c;
-                while ((c = getchar()) !0 EOF){
-                    putchar(tolowe(c));
-                }
-                return 0;
-            }
-            </pre>
-        </code>
-    </div>
+        <h2>ENTRADA Y SALIDA</h2>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <h3>Entrada y salida estándar</h3>
+                    <p>Las operaciones de entrada y salida no son en i parte del lenguaje C, por lo que hasta ahora no las hemos destacado. En este capitulo describiremos la biblioteca estándar, un  conjunto de funciones que proporcionan entrada y salida, manipilación de cadenas, manejo de memoria, rutinas matemáticas y una variedad de otros servicios.</p>
+                    <p>Cada archivo fuente que se refiera a una función de bibliotea de entrada/salida debe contener la línea #include < stdio.h></p>
+                    <p>El mecanismo de enrteda mpas simple es leer un carácter a la vez de la entrada stándar, normalmente el teclado, con getchar. int getchar(void), regresa el siguiene carácter de la entrada cada bez que se invoca, o EOF cuando encuentra fin de archivo. la constante EOF está definicda en stdio.h</p>
+                    <p>En muchos ambientes, un archivo puede tomar el lugar del teclado empleando la convencion < (prog < archent) para direccionamiento de entrada: si un programa "prog" usa getchar, entonces la lineda de órdenes provoca que prog lea caracteres de archent. El cambio de la entrada se realiza e tal manera que prog mismo es ajeno al cambio; en particular, la cadena "< archent" no está incluida entre los argumnetos de la línea de órdenes en argv.</p>
+                    <p>El cambio de la entrada es también visible si la entrada viene de otro programa via un mecanismo de interconexion(pipe) otroprog | prog, esto ejecuta tanto al programa otroprog como a prog, e interconecta la salida estandar de otroprog con la entrada stándar para prog.</p>
+                    <p>La función putchar(int) se emplea par salida, coloca el carácter c en la salida estándar qie por omisión es la pantalla, regresa el carácter escrito, o EOF si ocurre algún error. La salida puede ser digitada hacia algún archivo con > nombrearch, si prog utiliza putchar (prog > archsal). Si se permite la interconexión prog | otroprog, deja la salida estándar de prog en la entrada estándar de otroprog.</p>
+                    <p>La salida producda por printf tambien encuentra su salida estandar. Las llamadas a putchar a printf pueden estar traslapadas - la salida aparace en el orden en que se hicieron las llamadas.</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        #include < stdio.h>
+                        #include < ctype.h>
 
-    <div class="curso_info_div">
-        <h3>Salida con formato printf</h3>
-        <p>Definición de la función de salida printf</p>
-        <code>
-            <pre>int printf(char *format, arg1, arg2, ...)</pre>
-        </code>
-        <p>printf da formato e iimprime sus argumentos en la salida estándar bajo en control de format. Regresa el npumeor de caracteres impresos.</p>
-        <p>La cadena de formato contiene dos tipos de objetos: caracteres ordinarios, que son copiados al flujo de salida, y especificaciones de conversión, cada uno de los cuales causa la conversión e impresión de los siguientes argumentos sucesicos de printd. Cada especificación de conversión comienza con un % y el carácter de conversión pueden estar en orden.</p>
-        <ul>
-            <li>Un signo menos, que especifica el ajuste a la izquierda del argumento convertido.</li>
-            <li>Un número que especifica el ancho mínimo de campo. El argumento convertido será impreso dentro de un campo de lamenos este ancho. Si es ncesario seá llenado de blancos a la izquierda (o a la derecha, si se requiere ajuste a la izquierda) para completar la amplitud del campo.</li>
-            <li>Un punto, que separa el ancho de campo de la precisión.</li>
-            <li>Un npumero, de la precisión, que especifica el npumero máximo de caracteres de una cadena que seá impresos, o el número mpinimo de digitos del punto decimal de una valor de punto flotante, o el número de mínimo de digitos para un entero.</li>
-            <li>Una h si el entero seá impreso como un short, o una l(letra ele) si sepa como un long.</li>
-        </ul>
-        <p>Ahora veremos los efectos de una variavle de especificacciones al imprimir "hola, mundo" (11 caracteres) con una agregación de dos puntos(:) al inicio y al final.</p>
-        <code>
-            <pre>
-            :%s:  :hola,mundo:
-            :%10s: :hola, mundo:
-            :%.10s: :hola, mund:
-            :%-10s: :hola, mundo:
-            :%.15s: :hola, mundo    :
-            :%15.10s: :      hola,mund:
-            :%-15.10s: :hola, mund     :
-            </pre>
-        </code>
-    </div>
-
-    <div class="curso_info_div">
-        <h3>Entrada con formato scanf</h3>
-        <p>La función scanf es la entreda análoga de printf y proporciona muchas de las mismas facilidades de conversion en la dirección opuesta. int scanf(char *format, ...)</p>
-        <p>scanf lee caracteres de ka entrada estándar, los interpreta de acuerdo con las especificaciones que están en format, y almacena los resultados a través de los argumentos restantes. Cada uno de los argumentos debe ser un apuntador, indica dónde se deberá almacenar la entrada correspondiente.</p>
-        <p>Regresa como su valor el número de ítems de entrada que coinciden con éxito. Esto se puede emplear para decidir cuantos ítems se encontraron. Al final del archivo, regresa EOF.</p>
-        <p>Algunos caracteres de conversión indica la interpretación del campo de entrada, El argumento  correspondiente debe ser un apuntador.</p>
-        <code>
-            <pre>
-            d, entero decimal; int *.
-            i entero; int *. El entero puede estar en octal o hexadecimal.
-            o entero octal; int *.
-            u entero decimal sin signo; insigned int *.
-            x entero hexadecimal; int *.
-            c caracteres; char *. El salto normal sobre espacios en blanco es suprimido.
-            s cadena de caracteres; char *, apunta a un arreglo de caracteres suficientemente grande para la cadena y termina en '\0'.
-            e, f, g número de punto flotante con signo, punto decimal y exponente optativos; float *.
-            % '%' literal; no se hace asignación alguna.
-            </pre>
-        </code>
-        <p>Los carácteres de conversión d, i, o, u, x pueden ser precedidos pro 'h' para indicar que en la lisya de argumentos aparece un apuntador a short o 'l' para un apuntador a long en la lista de argumentos.</p>
-        <p>En formato semejante, los caracteres de conversión e, f, g pueden ser precedidos por l para indicar que hay un apuntador a double en lugar de a float en la lista de argumentos.</p>
-    </div>
-
-    <div class="curso_info_div">
-        <h3>Acceso a archivos</h3>
-        <p>En este paso escribiremos un programa que de acceso a un archivo que no esté ya conectado al programa. cat se emplea para escribir archivos en la pantalla, y como un colector de entradas de propósito general para programas que no disponen de la capacidad de tener acceso a los archivos por nombre.</p>
-        <p>cat x.c y.c; imprime el contenido de los archivos x.c y y.c en la salida estándar, Antes de que pueda ser leido o escrito, un archivo tiene que ser abierto por la función de biblioteca fopen, la cual toma un nombre externo como x.c ó y.c, que regresa un apuntador que serpa usado en postriores lecturas o escrituras del archivo.</p>
-        <p>Este apuntador, llamado apuntador de archivo, apunta a una estructura que contiene información acerca del archivo, tal como la ubicación de un buffer, la posición de carácter actual en el buffer, si el archivo está siendo leido o escrito y su han ocurrido errores o fin de archivo.</p>
-        <p>Las definiciones ontenidas de < stdio> incluyen una declaracipon de estructura llamada FILE. La única declaración necesaria para un apuntador de archivo.</p>
-        <code>
-            <pre>
-            FILE *fp;
-            FILE *fopen(char *nombre, chat *modo);
-            </pre>
-        </code>
-        <p>Esto dice que fp es un apuntador a un FILE, y fopen regresa un apuntador a FILE. La llamada a fopen en un programa es fp = fopen(nombre, modo);. El primer argumento nombre es una cadena de caracteres que contiene el nombre del archivo.</p>
-        <p>El segundo argumento es el modo, tambien una cadena de caracteres, que indica cómo se intenta emplear el archivo. Los modos disponibles incluyen lectura ("r"), escritura ("w"), y añadido ("a").</p>
-        <p>Si un archivo que no existe se abre para escribirlo o añadir, se crea, si es posible. Abrir un archivo existente para escribir provoca que los contenidos anteriores sean desechados, mintras que abrirlo para anañdor los preserva. Es un error tratar de leer un archivo que no existe, y también pueden haber otras causas de quer errr, fopem regresa NULL.</p>
-        <p>Los siguientes que se requiere es una forma de leer o escribir el archivo una vez estpa abierto. Esiten varias posibilidades, de las cuales getc y putc son las mas simples. getc regresa el siguiente carácter de un arhcivo; necesita el apuntador del archivo para decirle cuál es. int getc(FILE *fp). getc regresa el siguiente carácter del fujo al que se refiere fp; regresa EOf si ocurre algún error.</p>
-        <p>putc es una funcipon de salida. int putc(int c, FILE *fp). purc escribe el carácter c en el archivo fp y regresa el carácter escrito, o EOF si ocurre un error. Tal como getchar y putchar, get y puc pueden ser macros en lugar de funciones.</p>
-        <p>Para entrada o salida de archivos con formato se puede emplear las funciones fscanf y fprintf. Estas son idénticas a scanf y printf, excepto en que el primer argumento es un apuntador de archvo que especifica el archivo que será escrito o leído; la cadena de formaro es el segundo argumento.</p>
-        <code>
-            <pre>
-            int fscanf(FILE *fo, char *formato, ...)
-            int fprintf(FILE *fo, char *formato, ...)
-            </pre>
-        </code>
-        <code>
-            <pre>
-            #include < stdio.h>
-            main(int argc, chat *argc[]){
-                FILE *fp;
-                void filecopy(FILE *, FILE *);
-                if (argc == 1){
-                    . filecopy(stdin, stdout);
-                } else {
-                    while (--argc > 0){
-                        if ((fp =open(*++argv, "r")) == NULL){
-                            printf("cat:no se puede abrir %s'n", argv);
-                            return 1;
-                        } else {
-                            filecopy(fp,stdout);
-                            fclose(fp);
+                        main(){
+                            int c;
+                            while ((c = getchar()) !0 EOF){
+                                putchar(tolowe(c));
+                            }
+                            return 0;
                         }
-                    }
-                }
-                return 0;
-            }
+                    </code>
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        int printf(char *format, arg1, arg2, ...)
 
-            void filecopu(FILE *ifp, FILE *ofp){
-                int c;
-                while ((c = getc(ifp)) != EOF){
-                    putc(c, ofp);
-                }
-            }
-            </pre>
-        </code>
-        <p>La función int fclose(FILE *fp) es lo inverso a fopen, intrrumpe la conexión que fue establecida pro fopen entre el apuntador de archivo y el nombre externo, liberando al apuntador de archivo para otro archivo.</p>
-    </div>
+                        :%s:  :hola,mundo:
+                        :%10s: :hola, mundo:
+                        :%.10s: :hola, mund:
+                        :%-10s: :hola, mundo:
+                        :%.15s: :hola, mundo    :
+                        :%15.10s: :      hola,mund:
+                        :%-15.10s: :hola, mund     :
+                    </code>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <h3>Salida con formato printf</h3>
+                    <p>Definición de la función de salida printf</p>
+                    <p>printf da formato e iimprime sus argumentos en la salida estándar bajo en control de format. Regresa el npumeor de caracteres impresos.</p>
+                    <p>La cadena de formato contiene dos tipos de objetos: caracteres ordinarios, que son copiados al flujo de salida, y especificaciones de conversión, cada uno de los cuales causa la conversión e impresión de los siguientes argumentos sucesicos de printd. Cada especificación de conversión comienza con un % y el carácter de conversión pueden estar en orden.</p>
+                    <ul>
+                        <li>Un signo menos, que especifica el ajuste a la izquierda del argumento convertido.</li>
+                        <li>Un número que especifica el ancho mínimo de campo. El argumento convertido será impreso dentro de un campo de lamenos este ancho. Si es ncesario seá llenado de blancos a la izquierda (o a la derecha, si se requiere ajuste a la izquierda) para completar la amplitud del campo.</li>
+                        <li>Un punto, que separa el ancho de campo de la precisión.</li>
+                        <li>Un npumero, de la precisión, que especifica el npumero máximo de caracteres de una cadena que seá impresos, o el número mpinimo de digitos del punto decimal de una valor de punto flotante, o el número de mínimo de digitos para un entero.</li>
+                        <li>Una h si el entero seá impreso como un short, o una l(letra ele) si sepa como un long.</li>
+                    </ul>
+                    <p>Ahora veremos los efectos de una variavle de especificacciones al imprimir "hola, mundo" (11 caracteres) con una agregación de dos puntos(:) al inicio y al final.</p>
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <h3>Entrada con formato scanf</h3>
+                    <p>La función scanf es la entreda análoga de printf y proporciona muchas de las mismas facilidades de conversion en la dirección opuesta. int scanf(char *format, ...)</p>
+                    <p>scanf lee caracteres de ka entrada estándar, los interpreta de acuerdo con las especificaciones que están en format, y almacena los resultados a través de los argumentos restantes. Cada uno de los argumentos debe ser un apuntador, indica dónde se deberá almacenar la entrada correspondiente.</p>
+                    <p>Regresa como su valor el número de ítems de entrada que coinciden con éxito. Esto se puede emplear para decidir cuantos ítems se encontraron. Al final del archivo, regresa EOF.</p>
+                    <p>Algunos caracteres de conversión indica la interpretación del campo de entrada, El argumento  correspondiente debe ser un apuntador.</p>
+                    <p>Los carácteres de conversión d, i, o, u, x pueden ser precedidos pro 'h' para indicar que en la lisya de argumentos aparece un apuntador a short o 'l' para un apuntador a long en la lista de argumentos.</p>
+                    <p>En formato semejante, los caracteres de conversión e, f, g pueden ser precedidos por l para indicar que hay un apuntador a double en lugar de a float en la lista de argumentos.</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        d, entero decimal; int *.
+                        i entero; int *. El entero puede estar en octal o hexadecimal.
+                        o entero octal; int *.
+                        u entero decimal sin signo; insigned int *.
+                        x entero hexadecimal; int *.
+                        c caracteres; char *. El salto normal sobre espacios en blanco es suprimido.
+                        s cadena de caracteres; char *, apunta a un arreglo de caracteres suficientemente grande para la cadena y termina en '\0'.
+                        e, f, g número de punto flotante con signo, punto decimal y exponente optativos; float *.
+                        % '%' literal; no se hace asignación alguna.
+                    </code>
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        FILE *fp;
+                        FILE *fopen(char *nombre, chat *modo);
+                    </code>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <h3>Acceso a archivos</h3>
+                    <p>En este paso escribiremos un programa que de acceso a un archivo que no esté ya conectado al programa. cat se emplea para escribir archivos en la pantalla, y como un colector de entradas de propósito general para programas que no disponen de la capacidad de tener acceso a los archivos por nombre.</p>
+                    <p>cat x.c y.c; imprime el contenido de los archivos x.c y y.c en la salida estándar, Antes de que pueda ser leido o escrito, un archivo tiene que ser abierto por la función de biblioteca fopen, la cual toma un nombre externo como x.c ó y.c, que regresa un apuntador que serpa usado en postriores lecturas o escrituras del archivo.</p>
+                    <p>Este apuntador, llamado apuntador de archivo, apunta a una estructura que contiene información acerca del archivo, tal como la ubicación de un buffer, la posición de carácter actual en el buffer, si el archivo está siendo leido o escrito y su han ocurrido errores o fin de archivo.</p>
+                    <p>Las definiciones ontenidas de < stdio> incluyen una declaracipon de estructura llamada FILE. La única declaración necesaria para un apuntador de archivo.</p>
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <p>Esto dice que fp es un apuntador a un FILE, y fopen regresa un apuntador a FILE. La llamada a fopen en un programa es fp = fopen(nombre, modo);. El primer argumento nombre es una cadena de caracteres que contiene el nombre del archivo.</p>
+                    <p>El segundo argumento es el modo, tambien una cadena de caracteres, que indica cómo se intenta emplear el archivo. Los modos disponibles incluyen lectura ("r"), escritura ("w"), y añadido ("a").</p>
+                    <p>Si un archivo que no existe se abre para escribirlo o añadir, se crea, si es posible. Abrir un archivo existente para escribir provoca que los contenidos anteriores sean desechados, mintras que abrirlo para anañdor los preserva. Es un error tratar de leer un archivo que no existe, y también pueden haber otras causas de quer errr, fopem regresa NULL.</p>
+                    <p>Los siguientes que se requiere es una forma de leer o escribir el archivo una vez estpa abierto. Esiten varias posibilidades, de las cuales getc y putc son las mas simples. getc regresa el siguiente carácter de un arhcivo; necesita el apuntador del archivo para decirle cuál es. int getc(FILE *fp). getc regresa el siguiente carácter del fujo al que se refiere fp; regresa EOf si ocurre algún error.</p>
+                    <p>putc es una funcipon de salida. int putc(int c, FILE *fp). purc escribe el carácter c en el archivo fp y regresa el carácter escrito, o EOF si ocurre un error. Tal como getchar y putchar, get y puc pueden ser macros en lugar de funciones.</p>
+                    <p>Para entrada o salida de archivos con formato se puede emplear las funciones fscanf y fprintf. Estas son idénticas a scanf y printf, excepto en que el primer argumento es un apuntador de archvo que especifica el archivo que será escrito o leído; la cadena de formaro es el segundo argumento.</p>
+                    <p>La función int fclose(FILE *fp) es lo inverso a fopen, intrrumpe la conexión que fue establecida pro fopen entre el apuntador de archivo y el nombre externo, liberando al apuntador de archivo para otro archivo.</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                            int fscanf(FILE *fo, char *formato, ...)
+                            int fprintf(FILE *fo, char *formato, ...)
 
-    <div class="curso_info_div">
-        <h3>Manejo de errores stderr y exit</h3>
-        <p>El problema es que si no se puede tener acceso a un o de los archivos por alguna razón, el diagnostico se imprime al final de la salida concatenada. esto podría ser aceptable si la salida va a la pantalla, pero no si va hacia un archivo o hacia otro programa mediante una interconexión.</p>
-        <p>Para maneajr mejor esta situación, se asigna un segundo flujo de salida, llamda stderr, aun progrma en la mmisma forma que stdon y srdout. La salida escrita hacia stderr normalmente aparece en la pantalla, aun si la salida estandar es redirigida.</p>
-        <code>
-            <pre>
-            #include < stdio.h>
-            main(int argc, chat *argc[]){
-                FILE *fp;
-                void filecopy(FILE *, FILE *);
-                char *prog = argv[0]; /*nombre del programa para errores*/
-                if (argc == 1){
-                    . filecopy(stdin, stdout);
-                } else {
-                    while (--argc > 0){
-                        if ((fp =open(*++argv, "r")) == NULL){
-                            fprintf(stderr,"%s: no se puede abrir %s\n", prog, *argv);
-                            exit(1);
-                        } else {
-                            filecopy(fp,stdout);
-                            fclose(fp);
+                            #include < stdio.h>
+                            main(int argc, chat *argc[]){
+                                FILE *fp;
+                                void filecopy(FILE *, FILE *);
+                                if (argc == 1){
+                                    . filecopy(stdin, stdout);
+                                } else {
+                                    while (--argc > 0){
+                                        if ((fp =open(*++argv, "r")) == NULL){
+                                            printf("cat:no se puede abrir %s'n", argv);
+                                            return 1;
+                                        } else {
+                                            filecopy(fp,stdout);
+                                            fclose(fp);
+                                        }
+                                    }
+                                }
+                                return 0;
+                            }
+
+                            void filecopu(FILE *ifp, FILE *ofp){
+                                int c;
+                                while ((c = getc(ifp)) != EOF){
+                                    putc(c, ofp);
+                                }
+                            }
+                        </code>
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        #include < stdio.h>
+                        main(int argc, chat *argc[]){
+                            FILE *fp;
+                            void filecopy(FILE *, FILE *);
+                            char *prog = argv[0]; /*nombre del programa para errores*/
+                            if (argc == 1){
+                                . filecopy(stdin, stdout);
+                            } else {
+                                while (--argc > 0){
+                                    if ((fp =open(*++argv, "r")) == NULL){
+                                        fprintf(stderr,"%s: no se puede abrir %s\n", prog, *argv);
+                                        exit(1);
+                                    } else {
+                                        filecopy(fp,stdout);
+                                        fclose(fp);
+                                    }
+                                }
+                            }
+
+                            if (ferror(stdout)){
+                                fprintf(stderr, "%s: error al escribir stdout\n", prog);
+                                exit(2);
+                            }
+                            exit(0);
                         }
-                    }
-                }
+                    </code>
 
-                if (ferror(stdout)){
-                    fprintf(stderr, "%s: error al escribir stdout\n", prog);
-                    exit(2);
-                }
-                exit(0);
-            }
-            </pre>
-        </code>
-        <p>El programa señala erroes en dos manereas. Primero, la salida de diagnosticos producida por fprintf ca hcaia stderr, de modo que encuentra su camino hacia la pantalla en lugar de desaparecer en una interconexión o dentro de un archico de salida. Incluimos el nombre del programa, toamdolo de argv[0]. El argumento exit está disponible para cualquier proceso que haya llamado a éste, para que se pueda probar el exito ofracaso del programa.</p>
-        <p>Dentro de main, return expr es equivalente a exit(expr). exit tiene la venaja de que puede puede ser llamada desde otras fuenciones, y que las llamadas a ella se pueden encontrar con una programa de búsqueda de patrones. La función ferror regresa un valor diferente de cero si ocurrió un erro en el flujo fp. int ferror(FILE *fp).</p>
-        <p>Aunqie los erroes de salida son raros, si ocurren, por lo que los programas de producción deben revisar también esto. La función feof(FILE*) es análogo a ferror; regresa un valor diferente de cero si ha ocurrido un fin de archivo en el archivo en el especificado. int feof(FILE *fp)</p>
-    </div>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <h3>Manejo de errores stderr y exit</h3>
+                    <p>El problema es que si no se puede tener acceso a un o de los archivos por alguna razón, el diagnostico se imprime al final de la salida concatenada. esto podría ser aceptable si la salida va a la pantalla, pero no si va hacia un archivo o hacia otro programa mediante una interconexión.</p>
+                    <p>Para maneajr mejor esta situación, se asigna un segundo flujo de salida, llamda stderr, aun progrma en la mmisma forma que stdon y srdout. La salida escrita hacia stderr normalmente aparece en la pantalla, aun si la salida estandar es redirigida.</p>
+                    <p>El programa señala erroes en dos manereas. Primero, la salida de diagnosticos producida por fprintf ca hcaia stderr, de modo que encuentra su camino hacia la pantalla en lugar de desaparecer en una interconexión o dentro de un archico de salida. Incluimos el nombre del programa, toamdolo de argv[0]. El argumento exit está disponible para cualquier proceso que haya llamado a éste, para que se pueda probar el exito ofracaso del programa.</p>
+                    <p>Dentro de main, return expr es equivalente a exit(expr). exit tiene la venaja de que puede puede ser llamada desde otras fuenciones, y que las llamadas a ella se pueden encontrar con una programa de búsqueda de patrones. La función ferror regresa un valor diferente de cero si ocurrió un erro en el flujo fp. int ferror(FILE *fp).</p>
+                    <p>Aunqie los erroes de salida son raros, si ocurren, por lo que los programas de producción deben revisar también esto. La función feof(FILE*) es análogo a ferror; regresa un valor diferente de cero si ha ocurrido un fin de archivo en el archivo en el especificado. int feof(FILE *fp)</p>
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <h3>Entrada y salida de líneas</h3>
+                    <p>La biblioteca estándar proporciona una rutina de entrada fgets, es semenjante a la funcipon getline. char *fgets(char *linea, int maxlinea, FILE *fp).</p>
+                    <p>fgets lee  la siguiente linea (incluyendo el carácter nueva linea) del arhcivo fp y la deja en el arreglo de caracternes lineas; se leen hasta maxline-l caracteres. La linea resultante se termina con '\0'. Normalmente, fgets regersa línea en caso de fin de archivo o de error, regresa NULL.</p>
+                    <p>Para salida, la función fputs escribe una cadena (que no necesita contenedor una nueva linea) a un archivo: int fputs(char *line, FILE *fp)</p>
+                    <p>Esta función regresa EOF si ocurre un error y cero si no ocurre. Las funciones de biblioteca gets y puts son semenajtes a dgets y fputs, pero operan sobre stdin y sdout. De modo desconcertante, gets elimina el '\n' terminal y puts lo agrega.</p>
+                </div>
+                <div class="conteiner-curso__content-code">
 
-    <div class="curso_info_div">
-        <h3>Entrada y salida de líneas</h3>
-        <p>La biblioteca estándar proporciona una rutina de entrada fgets, es semenjante a la funcipon getline. char *fgets(char *linea, int maxlinea, FILE *fp).</p>
-        <p>fgets lee  la siguiente linea (incluyendo el carácter nueva linea) del arhcivo fp y la deja en el arreglo de caracternes lineas; se leen hasta maxline-l caracteres. La linea resultante se termina con '\0'. Normalmente, fgets regersa línea en caso de fin de archivo o de error, regresa NULL.</p>
-        <p>Para salida, la función fputs escribe una cadena (que no necesita contenedor una nueva linea) a un archivo: int fputs(char *line, FILE *fp)</p>
-        <p>Esta función regresa EOF si ocurre un error y cero si no ocurre. Las funciones de biblioteca gets y puts son semenajtes a dgets y fputs, pero operan sobre stdin y sdout. De modo desconcertante, gets elimina el '\n' terminal y puts lo agrega.</p>
-    </div>
 
-    <div class="curso_info_div">
-        <h3>Operaciones sobre cadenas</h3>
-        <p>ya hemos menionadlas funciones sobre cadenas strlen, strcpy, strcat, strcmp, que se encuentram en < string.h>. En adelante, s y t son de tipo char*, y c y n ints.</p>
-        <ul>
-            <li>
-                strcat(s,t) concaatena t al final de s
-                strncat(s,t,n) concatena n caracteres de t al final de s.
-                strcmp(s,t) regresa negatico, cero, o positivo para s < t, s == t, o s > t.
-                strncmp(s,t,n) igual que strcmp preo sólo en los primeros n caracteres
-                strcpy(s,t) copia t en s
-                strncpy(s,t,n) copia a lo más n caracteres de t a s
-                strlen(s) regresa la longitud de s
-                strchr(s,c) regresa un apuntador al primer c que esté en s, o NULL si no está presente
-                strrchr(s,c) regresa un apuntador al último o que esté en s, o NULL si no está presente
-            </li>
-        </ul>
-    </div>
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        strcat(s,t) concaatena t al final de s
+                        strncat(s,t,n) concatena n caracteres de t al final de s.
+                        strcmp(s,t) regresa negatico, cero, o positivo para s < t, s == t, o s > t.
+                        strncmp(s,t,n) igual que strcmp preo sólo en los primeros n caracteres
+                        strcpy(s,t) copia t en s
+                        strncpy(s,t,n) copia a lo más n caracteres de t a s
+                        strlen(s) regresa la longitud de s
+                        strchr(s,c) regresa un apuntador al primer c que esté en s, o NULL si no está presente
+                        strrchr(s,c) regresa un apuntador al último o que esté en s, o NULL si no está presente
+                    </code>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <h3>Operaciones sobre cadenas</h3>
+                    <p>ya hemos menionadlas funciones sobre cadenas strlen, strcpy, strcat, strcmp, que se encuentram en < string.h>. En adelante, s y t son de tipo char*, y c y n ints.</p>
+                </div>
+            </div>
 
-    <div class="curso_info_div">
-        <h3>Administración de almacenamiento</h3>
-        <p>Las funciones de malloc y calloc ontienen bloques de memoria dinámicamente, void malloc(size_t n) regresa un apuntador a n bytes de almacenamiento no inicializado, o NULL si la petición no se satisface.</p>
-        <p>void *calloc(size_t n, size_t size) regresa un apuntador a suficiente espacio para almacenar un arreglo de n objetos de tamaño especificado, o NULL si la petición no se satisface. El espacio de almacenamiento es inicializado en cero.</p>
-        <p>El apuntador regresado por malloc ó calloc tiene la alineación apropiada para el objeto en cuestión, pero se le debe hacer una conversión forzada al tipo apropiado como en:</p>
-        <code>
-            <pre>
-            int ip;
-            ip = (in *) calloc(n, sizeof(int));
-            </pre>
-        </code>
-        <p>free(p) libera el espacio apuntado por p, donde p se obtuvo originalmente por una llamada a malloc o calloc. No existe restricciones sobre el orden en el que se libera el espacio, pero es una grave error liberar algo no  obtenido por una llamada a calloc o malloc.</p>
-        <p>Tambien es un error usar algo despues de haber sido liberado. Se debe guardar lo necesario antes de liberar memoria.</p>
-    </div>
-
-    <div class="curso_info_div">
-        <h3>Generación de números aleatorios</h3>
-        <p>La función rand() calcula una secuencia de enteros pseudoaleatorio en el rango de cero a RAND_mAX, que está definido en < stdib.h>. Una forma de producir número aleatorios de punto flotante mayores o iguales a cero per menos que uno es</p>
-        <code><pre>
-        #define frend() ((dobule) rand()/(RAND_MAX+1))
-        </pre></code>
-        <p>Si su biblioteca ya proporciona una función para números aleatorios de punto flotante, es probable que tenga mejores propiedades estadisticas que ésta.</p>
-        <p>La función srand(unsigned) fiija la semilla para rand. La implantación portátil de rand y de srand sugerida por el estándar.</p>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <h3>Administración de almacenamiento</h3>
+                    <p>Las funciones de malloc y calloc ontienen bloques de memoria dinámicamente, void malloc(size_t n) regresa un apuntador a n bytes de almacenamiento no inicializado, o NULL si la petición no se satisface.</p>
+                    <p>void *calloc(size_t n, size_t size) regresa un apuntador a suficiente espacio para almacenar un arreglo de n objetos de tamaño especificado, o NULL si la petición no se satisface. El espacio de almacenamiento es inicializado en cero.</p>
+                    <p>El apuntador regresado por malloc ó calloc tiene la alineación apropiada para el objeto en cuestión, pero se le debe hacer una conversión forzada al tipo apropiado como en:</p>
+                    <p>free(p) libera el espacio apuntado por p, donde p se obtuvo originalmente por una llamada a malloc o calloc. No existe restricciones sobre el orden en el que se libera el espacio, pero es una grave error liberar algo no  obtenido por una llamada a calloc o malloc.</p>
+                    <p>Tambien es un error usar algo despues de haber sido liberado. Se debe guardar lo necesario antes de liberar memoria.</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        int ip;
+                        ip = (in *) calloc(n, sizeof(int));
+                    </code>
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        #define frend() ((dobule) rand()/(RAND_MAX+1))
+                    </code>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <h3>Generación de números aleatorios</h3>
+                    <p>La función rand() calcula una secuencia de enteros pseudoaleatorio en el rango de cero a RAND_mAX, que está definido en < stdib.h>. Una forma de producir número aleatorios de punto flotante mayores o iguales a cero per menos que uno es</p>
+                    <p>Si su biblioteca ya proporciona una función para números aleatorios de punto flotante, es probable que tenga mejores propiedades estadisticas que ésta.</p>
+                    <p>La función srand(unsigned) fiija la semilla para rand. La implantación portátil de rand y de srand sugerida por el estándar.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <h2>LA INTERFAZ CON EL SISTEMA UNIX</h2>
