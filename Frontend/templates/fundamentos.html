@@ -411,14 +411,6 @@
 
         <div class="conteiner-curso">
             <div class="conteiner-curso__content">
-                <div class="conteiner-curso__content-text">
-                    <h3>Apuntadores a caracterees, y funciones</h3>
-                    <p>Una cosntante de cadena escrita como "Soy una cadena" es un arreglo de caracteres que termina con un carácter nulo "\0", de tal manera que los programas puedan encontrar el fin. La longitud de alamacenamiento es así uno más que el número de caracteres entre las comillas.</p>
-                    <p>Cuando una cadena de caracteres como está aparece en un programa, el acceso a ella es atraves de un puntero a caracteres.</p>
-                    <p>Las cadenas constanres no necesitan ser argumentos de funciones. Si pmensaje se declara como: char *pmensaje; entonces la proposición pmensaje = "ya es el tiempo"; se asigna a pmesanje un puntero al arreglo de caracteres. Esta no es la copia de una cadena; solo concierne a punteros.</p>
-                    <p>amensaje es un arreglo suficientemente grande como para contene la secuencia de caracteres y el "\0" que lo inicializa. por otro lado pmensaje es un puntero, incializado para apuntar a una cadena constante; el puntero puede modificarse posteriormente para qu apunte a algún otro lado. el resultado es indefinido si se trata de modificar el contenido de la cadena.</p>
-                    <p>La primera función es strcpy(s,t), que copia la cadena t a la cadena s. Sería agradable dedir simplemente s=t, pero esto copia el apuntador, no los caracteres. Para copiar los caracteres requiere de un ciclo. Primero está la version con un arrreglo, luego con apuntadores.</p>
-                </div>
                 <div class="conteiner-curso__content-code">
                     <code>
                         char amensaje[] = "ya es el tiempo"; /*arreglo*/
@@ -438,8 +430,20 @@
                         }
                     </code>
                 </div>
+                <div class="conteiner-curso__content-text">
+                    <h3>Apuntadores a caracterees, y funciones</h3>
+                    <p>Una cosntante de cadena escrita como "Soy una cadena" es un arreglo de caracteres que termina con un carácter nulo "\0", de tal manera que los programas puedan encontrar el fin. La longitud de alamacenamiento es así uno más que el número de caracteres entre las comillas.</p>
+                    <p>Cuando una cadena de caracteres como está aparece en un programa, el acceso a ella es atraves de un puntero a caracteres.</p>
+                    <p>Las cadenas constanres no necesitan ser argumentos de funciones. Si pmensaje se declara como: char *pmensaje; entonces la proposición pmensaje = "ya es el tiempo"; se asigna a pmesanje un puntero al arreglo de caracteres. Esta no es la copia de una cadena; solo concierne a punteros.</p>
+                    <p>amensaje es un arreglo suficientemente grande como para contene la secuencia de caracteres y el "\0" que lo inicializa. por otro lado pmensaje es un puntero, incializado para apuntar a una cadena constante; el puntero puede modificarse posteriormente para qu apunte a algún otro lado. el resultado es indefinido si se trata de modificar el contenido de la cadena.</p>
+                    <p>La primera función es strcpy(s,t), que copia la cadena t a la cadena s. Sería agradable dedir simplemente s=t, pero esto copia el apuntador, no los caracteres. Para copiar los caracteres requiere de un ciclo. Primero está la version con un arrreglo, luego con apuntadores.</p>
+                </div>
             </div>
             <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <p>Ahora examinaremos con strcmp(s,t) que compara las caenas de caracteres sy t, y regresa un valor negativo, cero o positivo si s es la lexicográficamente menor que, igual a, o mayor que t. El valor se obtiene al resto los caracteres de la primera posicion en que s y t no coinciden.</p>
+                    <p>Puesto que ++ y -- son operadores prefijos o posfijos, se presentan otras combinaciones de *, ++ , aun que con menos frecuencia. Por ejemplo *--p disminuye p antes de traer el caraácter al que apunta.</p>
+                </div>
                 <div class="conteiner-curso__content-code">
                     <code>
                         int strcmp(char *s, char *t){
@@ -464,24 +468,12 @@
                         val = *--p; /*saca el tope de la pila y lo pone en val*/
                     </code>
                 </div>
-                <div class="conteiner-curso__content-text">
-                    <p>Ahora examinaremos con strcmp(s,t) que compara las caenas de caracteres sy t, y regresa un valor negativo, cero o positivo si s es la lexicográficamente menor que, igual a, o mayor que t. El valor se obtiene al resto los caracteres de la primera posicion en que s y t no coinciden.</p>
-                    <p>Puesto que ++ y -- son operadores prefijos o posfijos, se presentan otras combinaciones de *, ++ , aun que con menos frecuencia. Por ejemplo *--p disminuye p antes de traer el caraácter al que apunta.</p>
-                </div>
             </div>
         </div>
 
         <div class="conteiner-curso">
             <div class="conteiner-curso__content">
-                <div class="conteiner-curso__content-text">
-                    <h3>Arreglos de apuntadores; apunteros a punteros</h3>
-                    <p>Si las líneas que se van a ordenar se almacenan juntas en un gran arreglo de caracteres, entonces se puede tener acceso a cada linea por medio de un apuntador a su primer carácter. por su lado, los apuntadores se pueden alamcenar en un arreglo. Dos lineas se pueden comparar pasando sus punteros a strcmp. Cuando dos lienas desordenadas tienen que intercambiarse, se intercambian los apuntadores en el arreglo de apuntadores, no las líneas de texto.</p>
-                    <p>Esto elimina el doble problema de un manejo complicado de almacenamiento y exceso de procesamiento que se produciría al mover las lineas. Veremos el proceso de ordenamiento tiene tres pasos. Primero veremmos las estructuras de datos y la entrada y salida.</p>
-                    <p>La rutina de entreda tiene que reunir y guardar los caracteres de cada línea, y contruir un arreglo de apuntadores hacia las líneas. Tambien debe contar el número de líneas de entrada, puesto que esa información se requiere para el ordenamiento y la impresión. DEbido a que la funcion de entrada sólo puede tratar con número fino de líneas, puede regresar alguna cuenta de líneas ilegal, como -1, si se presenta demasiado texto a la entrada.</p>
-                    <p>La rutina de salida sólo tiene que imprimir las líneas en el orden en que aparecen en el arreglo de apuntadores.</p>
-                </div>
-                              <div class="conteiner-curso__content-code">
-                    
+                <div class="conteiner-curso__content-code">    
                     <code>
                         #include < stdio.h>
                         #include < string.h>
@@ -532,8 +524,20 @@
                         }
                     </code>
                 </div>
+                <div class="conteiner-curso__content-text">
+                    <h3>Arreglos de apuntadores; apunteros a punteros</h3>
+                    <p>Si las líneas que se van a ordenar se almacenan juntas en un gran arreglo de caracteres, entonces se puede tener acceso a cada linea por medio de un apuntador a su primer carácter. por su lado, los apuntadores se pueden alamcenar en un arreglo. Dos lineas se pueden comparar pasando sus punteros a strcmp. Cuando dos lienas desordenadas tienen que intercambiarse, se intercambian los apuntadores en el arreglo de apuntadores, no las líneas de texto.</p>
+                    <p>Esto elimina el doble problema de un manejo complicado de almacenamiento y exceso de procesamiento que se produciría al mover las lineas. Veremos el proceso de ordenamiento tiene tres pasos. Primero veremmos las estructuras de datos y la entrada y salida.</p>
+                    <p>La rutina de entreda tiene que reunir y guardar los caracteres de cada línea, y contruir un arreglo de apuntadores hacia las líneas. Tambien debe contar el número de líneas de entrada, puesto que esa información se requiere para el ordenamiento y la impresión. DEbido a que la funcion de entrada sólo puede tratar con número fino de líneas, puede regresar alguna cuenta de líneas ilegal, como -1, si se presenta demasiado texto a la entrada.</p>
+                    <p>La rutina de salida sólo tiene que imprimir las líneas en el orden en que aparecen en el arreglo de apuntadores.</p>
+                </div>
             </div>
             <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <p>El principal nuevo elemento es la declaración para linptr, que indica que lineptr es un arreglo de MAXLINES elementos, cada uno de los cuales es un apuntador a char, Esto es, lineptr[i] es un apuntador a carácter, y *lineptr[i] es el carácter al que apunta, el primer carácter de la i-ésima linea de texto almacenada.</p>
+                    <p>Puesto que lineptr es por si mismo el nombre de un arreglo, puede tratarse como un apuntador en la misma forma que en nuestros ejemplos anteriores, y weitelines puede escribirse en su lugar como.</p>
+                    <p>Inicialmente *lineptr aunta a la primera línea; cada incremento lo avanza al siguiente apuntador a línea miestras nlines se disminuye.</p>
+                </div>
                 <div class="conteiner-curso__content-code">
                     <code>
                         void writelines(char *lineptr[], int nlines){
@@ -543,72 +547,81 @@
                         }
                     </code>
                 </div>
-                <div class="conteiner-curso__content-text">
-                    <p>El principal nuevo elemento es la declaración para linptr, que indica que lineptr es un arreglo de MAXLINES elementos, cada uno de los cuales es un apuntador a char, Esto es, lineptr[i] es un apuntador a carácter, y *lineptr[i] es el carácter al que apunta, el primer carácter de la i-ésima linea de texto almacenada.</p>
-                    <p>Puesto que lineptr es por si mismo el nombre de un arreglo, puede tratarse como un apuntador en la misma forma que en nuestros ejemplos anteriores, y weitelines puede escribirse en su lugar como.</p>
-                    <p>Inicialmente *lineptr aunta a la primera línea; cada incremento lo avanza al siguiente apuntador a línea miestras nlines se disminuye.</p>
-                </div>
             </div>
         </div>
     </div>
-    <h2>ESTRUCTURAS</h2>
-    <div class="curso_info_div">
-        <p>Una estructura es una colección de una o más variables, de tipos posiblemente deifernetes, agrupadas bajo un solo nombre para manejo coveniente. Las estructuras ayudan a organizar datos complicados, en particular dentro de programas grandes, debido a que perimten que a un grupo de variables relacionadas se les trate como una unidad en lugar de como entidades separadas.</p>
-        <p>un ejemplo tradicional de estructura es el registro de una nómina: un empleado está descrito por un conjunto de atributos, como nombre, domicilio, número del seguro social, salario, etc.</p>
-        
-        <h3>Comceptos básicos sobre estructuras</h3>
-        <p>Definamos algunas estructuras propias para graficación. el onjeto básico es un punto, del cual supondremos que tiene una coordenada x y una coordenada y, ambas enteras. Los dos componentes pueden ser colocados en una estructura declarada así:</p>
-        <code>
-            <pre>
-            struct point {
-                int x;
-                int y;
-            };
-            </pre>
-        </code>
-        <p>La palabra reservada struct presenta la declaracion de una estructura, que es una lisya de declaraciones entre llaves. Un nombre optativo, llamado rótulo de estructura, puede seguir a la palabra struct (como aqui lo hace point). El rótulo da nombre a esta clase de estructura, y en adelante puede ser utilizado como una abreviatura para la parte de declaraciones entre llaves.</p>
-        <p>Las variables nombradas dentro de la estructua se llaman miembros. Un miembro de estructura o rótulo, y una variavle ordinario (esto es, no miembro) puede tener el mismo nombre sin conflicto, puesto que siempre se pueden distingir por el contecto. Además, en diferentes estructuras pueden encontrartse los mismos nombres sólo para objetos estrechamente relacionados.</p>
-        <p>Una declaración struct define un tipo. lallave derecha que termina la lisya de miembros puede ser seguida por una lista de variables, como se hace para cualquier tipo básico. Esto es, struct { ... } x,y,z; es análogo a int x,y,z; en el sentido de que cada proposición declara a x, y y z como una variable del tipo nombrado y causa que se les reserve espacio contiguo.</p>
-        <p>Una declaración de estructura que no está seguida por una lista de variables no reserva espacio de almacenamiento sino que simplemente describe una plantilla o la forma de una estructura. Sin embargo, si la declaración está rotulada, el rótulo se puede emplear posteriormente en definiciones de isntancias de la estructura. Por ejemplo, dada la declaración anterior de point, struct point pt;</p>
-        <p>Define una variable pt que es una estructura de tipo struct point. Una estructura se puede inicializar al seguir su definición con una lisya de inicializadores, cada uno una expresión constante, para los miembros: struct point maxpt = { 320, 200}; Una estructura automática tambien se puede inicializar por asignación o llamando a una función que regresa una estructura del tipo adecuado.</p>
-        <p>Se hace referencia a un miembro de una estructua en particular en una expresión con una construccion de la forma nombre-estructura.miembro, El operador miembro de estructura "." conecta al nombre de la estructura con el nombre del miembro. Por ejemplo, para imprimir las coordenadas del punto pt</p>
-        <code>
-            <pre>
-            printf("%d,%d", pt.x, pt.y);
-            </pre>
-        </code>
+    <div class="contenedor-fundamentos__curso">
+        <h2>ESTRUCTURAS</h2>
+        <div class="conteiner-curso">
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <h3>Comceptos básicos sobre estructuras</h3>
+                    <p>Una estructura es una colección de una o más variables, de tipos posiblemente deifernetes, agrupadas bajo un solo nombre para manejo coveniente. Las estructuras ayudan a organizar datos complicados, en particular dentro de programas grandes, debido a que perimten que a un grupo de variables relacionadas se les trate como una unidad en lugar de como entidades separadas.</p>
+                    <p>un ejemplo tradicional de estructura es el registro de una nómina: un empleado está descrito por un conjunto de atributos, como nombre, domicilio, número del seguro social, salario, etc.</p>
+                    
+                    <p>Definamos algunas estructuras propias para graficación. el onjeto básico es un punto, del cual supondremos que tiene una coordenada x y una coordenada y, ambas enteras. Los dos componentes pueden ser colocados en una estructura declarada así:</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        struct point {
+                            int x;
+                            int y;
+                        };
+                    </code>              
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        printf("%d,%d", pt.x, pt.y);
+                    </code>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <p>La palabra reservada struct presenta la declaracion de una estructura, que es una lisya de declaraciones entre llaves. Un nombre optativo, llamado rótulo de estructura, puede seguir a la palabra struct (como aqui lo hace point). El rótulo da nombre a esta clase de estructura, y en adelante puede ser utilizado como una abreviatura para la parte de declaraciones entre llaves.</p>
+                    <p>Las variables nombradas dentro de la estructua se llaman miembros. Un miembro de estructura o rótulo, y una variavle ordinario (esto es, no miembro) puede tener el mismo nombre sin conflicto, puesto que siempre se pueden distingir por el contecto. Además, en diferentes estructuras pueden encontrartse los mismos nombres sólo para objetos estrechamente relacionados.</p>
+                    <p>Una declaración struct define un tipo. lallave derecha que termina la lisya de miembros puede ser seguida por una lista de variables, como se hace para cualquier tipo básico. Esto es, struct { ... } x,y,z; es análogo a int x,y,z; en el sentido de que cada proposición declara a x, y y z como una variable del tipo nombrado y causa que se les reserve espacio contiguo.</p>
+                    <p>Una declaración de estructura que no está seguida por una lista de variables no reserva espacio de almacenamiento sino que simplemente describe una plantilla o la forma de una estructura. Sin embargo, si la declaración está rotulada, el rótulo se puede emplear posteriormente en definiciones de isntancias de la estructura. Por ejemplo, dada la declaración anterior de point, struct point pt;</p>
+                    <p>Define una variable pt que es una estructura de tipo struct point. Una estructura se puede inicializar al seguir su definición con una lisya de inicializadores, cada uno una expresión constante, para los miembros: struct point maxpt = { 320, 200}; Una estructura automática tambien se puede inicializar por asignación o llamando a una función que regresa una estructura del tipo adecuado.</p>
+                    <p>Se hace referencia a un miembro de una estructua en particular en una expresión con una construccion de la forma nombre-estructura.miembro, El operador miembro de estructura "." conecta al nombre de la estructura con el nombre del miembro. Por ejemplo, para imprimir las coordenadas del punto pt</p>
+                </div>
+            </div>    
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-text">
+                    <h3>Estructuras y funciones</h3>
+                    <p>Las únicas operaciones legales sobre una estructura son copiarla o asignarla como unidad, tomar si dirección con &, y tener acceso a sus miembros. La copia y la asignación incluye pasarlas como argumentos a funciones y tambien regresar valores de funciones. Las estructuras no se pueden comparar. Una estructura se puede inicializar con una lista de valores constantes de miembros, una estructura automática tambien se puede inicializar con una asignación.</p>
+                    <p>Investiguemos las estructuras escribiendo algunas funciones para manipular puntos y rectangulos. Hay por lo menos tres acercamientos posibles: pasar separadamente los componentes, pasar una estructura completa o pasar un apuntador a ella. Cada uno tiene sus puntos buenos y malos. La primera función, makepoint, toma dos enteros y regresa una estructura point:</p>
+                </div>
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        struct point makepoint(int x, int y){
+                            struct point temp;
+
+                            temp.x = x;
+                            temp.y = y;
+                            return temp;
+                        }
+                    </code>
+                </div>
+            </div>
+            <div class="conteiner-curso__content">
+                <div class="conteiner-curso__content-code">
+                    <code>
+                        struct rect screen;
+                        struct pint middle;
+                        struct pint makepoint(int, int);
+            
+                        screen.pt1 = makepint(0, 0);
+                        screen.pt2 = makepoint(XMAX, YMAX);
+                        middle = makepint((screen.pt1.x + screen.pt2.x)/2,(screen.pt1.y + screen.pt2.y)/2);
+                    </code>
+                </div>
+                <div class="conteiner-curso__content-text">
+                    <p>Nótese que no hay conflictos entre el nombre del argumento y el miembro con el mismo nombre; incluso la reutilización de los nombres refuerza el vinculo. makepint ahora se puede usar para inicializar dinámicamente cualquier estructura, o para proporcianr los argumentos de la estructura a una función:</p>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-    <div class="curso_info_div">
-        <h3>Estructuras y funciones</h3>
-        <p>Las únicas operaciones legales sobre una estructura son copiarla o asignarla como unidad, tomar si dirección con &, y tener acceso a sus miembros. La copia y la asignación incluye pasarlas como argumentos a funciones y tambien regresar valores de funciones. Las estructuras no se pueden comparar. Una estructura se puede inicializar con una lista de valores constantes de miembros, una estructura automática tambien se puede inicializar con una asignación.</p>
-        <p>Investiguemos las estructuras escribiendo algunas funciones para manipular puntos y rectangulos. Hay por lo menos tres acercamientos posibles: pasar separadamente los componentes, pasar una estructura completa o pasar un apuntador a ella. Cada uno tiene sus puntos buenos y malos. La primera función, makepoint, toma dos enteros y regresa una estructura point:</p>
-        <code>
-            <pre>
-            struct point makepoint(int x, int y){
-                struct point temp;
-
-                temp.x = x;
-                temp.y = y;
-                return temp;
-            }
-            </pre>
-        </code>
-        <p>Nótese que no hay conflictos entre el nombre del argumento y el miembro con el mismo nombre; incluso la reutilización de los nombres refuerza el vinculo. makepint ahora se puede usar para inicializar dinámicamente cualquier estructura, o para proporcianr los argumentos de la estructura a una función:</p>
-        <code>
-            <pre>
-            struct rect screen;
-            struct pint middle;
-            struct pint makepoint(int, int);
-
-            screen.pt1 = makepint(0, 0);
-            screen.pt2 = makepoint(XMAX, YMAX);
-            middle = makepint((screen.pt1.x + screen.pt2.x)/2,(screen.pt1.y + screen.pt2.y)/2);
-            </pre>
-        </code>
-        <p></p>
-    </div>
-
     <h2>ENTRADA Y SALIDA</h2>
     <div class="curso_info_div">
         <p>Las operaciones de entrada y salida no son en i parte del lenguaje C, por lo que hasta ahora no las hemos destacado. En este capitulo describiremos la biblioteca estándar, un  conjunto de funciones que proporcionan entrada y salida, manipilación de cadenas, manejo de memoria, rutinas matemáticas y una variedad de otros servicios.</p>
