@@ -70,7 +70,8 @@ nav {
 .nav-barra__botones-btn {
     display: flex;
     align-items: center;
-    width: 7rem;
+    justify-content: center ;
+    width: auto;
 }
 
 .nav-barra__botones-btn a {
@@ -106,6 +107,10 @@ nav {
     padding: 0rem 1rem;
     border-radius: 0px 5px 5px 0px;
 }
+.nav-barra__botones-btn:hover {
+    background: linear-gradient(180deg, #ffffff70, transparent);
+}
+
 .nav-barra__botones-btn a:hover {
     color: white;
     text-decoration: underline;
@@ -122,7 +127,7 @@ nav {
 FOOTER PIE DE PAGINA
 ****************************/
 footer {
-    background: linear-gradient(0deg, var(--color-back), var(--secundary-color));
+    background: linear-gradient(0deg, rgb(35 32 32), rgb(223 168 110 / 14%), var(--secundary-color));
     display: flex;
     flex-direction: column;
     height: 15rem;
@@ -130,7 +135,7 @@ footer {
 }
 
 .footer-email {
-    background: linear-gradient(-45deg, black, transparent);
+    background-color: black;
     display: flex;
     flex-direction: row;
     height: 30%;
@@ -161,10 +166,12 @@ footer {
 }
 .footer-email__message-text-title {
     font-weight: bold;
+    color: var(--font-color);
 }
 
 .footer-email__message-text-text {
     font-family: inherit;
+    color: var(--font-color);
 }
 
 .footer-email__scope {
@@ -178,6 +185,7 @@ footer {
 }
 
 .footer-email__scope-inputext{
+    background: linear-gradient(90deg, var(--primary-color), black);
     background-color: var(--secundary-color);
     border-radius: 1rem 0rem 0rem 1rem;
     padding: 1rem;
@@ -195,7 +203,7 @@ footer {
 }
 
 .footer-email__scope-inputext input::placeholder {
-    color: inherit;
+    color: black;
 }
 
 
@@ -203,7 +211,7 @@ footer {
     background-color: black;
     color: white;
     padding: 1rem;
-    border-radius: 0rem 1rem 1rem 0rem;
+    border: 1px solid transparent;
 }
 
 .footer-content {
@@ -249,6 +257,14 @@ footer {
 .footer-content__cursos-text a:hover, .footer-content__description-text a:hover, .footer-content__mycount-text a:hover, .footer-content__redes-text a:hover {
     color: white;
     text-decoration: underline;
+}
+
+.footer-email__scope-suscribe:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+    border: 1px solid;
+    border-image: linear-gradient(90deg, black, white ) 1;
+    background-clip: border-box;
 }
 
 
@@ -312,11 +328,12 @@ INDEX
 }
 
 .container-description{
-    background: linear-gradient(0deg, var(--color-back), rgb(249 92 0 / 44%), transparent);
+    background-color: black;    
     display: flex;
     flex-direction: row;
-    height: 4rem;
+    height: 6rem;
     width: 100%;
+    margin: 3rem 2rem 0rem 2rem ;
 }
 
 .container-description__register{
@@ -340,10 +357,10 @@ INDEX
 }
 
 .container-description__register-text a{
-    background-color: #a55511;
+    background-color: var(--primary-color);
     font-size: inherit;
     text-decoration: none;
-    color: var(--font-color);
+    color: black;
     padding: 1rem 2rem;
     border-radius: 1rem;
 }
@@ -377,7 +394,7 @@ INDEX
     transform: translateY(-2px);
 }
 .container-description__register-text a:hover{
-    background-color: black;
+    background: linear-gradient(-90deg, white, var(--primary-color));
     text-decoration: underline;
 }
 
@@ -385,16 +402,18 @@ INDEX
 CONTENEDOR DE CURSOS
 ****************************/
 .container-cursos {
+    background-color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 1rem;
+    margin: 10rem 1rem 4rem 1rem;
     border-radius: 1rem;
+    padding: 1rem 2rem;
 }
 
 .container-cursos__card-curso {
-    background-color: var(--secundary-color);
+    background-color: #ffd9b9;
     display: flex;
     flex-direction: column;
     margin: 1rem;
@@ -407,8 +426,13 @@ CONTENEDOR DE CURSOS
     transition: transform 0.5s ease, background 0.7s ease;
 }
 
+.container-cursos__card-curso a {
+    color: black;
+    transition: transform 0.5s ease;
+}
+
 .container-cursos__img-curso {
-    background-color: var(--color-back);
+    background-color: white;
     height: 10rem;
     width: 10rem;
     border-radius: 50%;
@@ -447,8 +471,13 @@ CONTENEDOR DE CURSOS
 
 .container-cursos__card-curso:hover {
     background-color: var(--primary-color);
-    box-shadow: 5px 4px 1px var(--secundary-color);
+    box-shadow: 3px 4px 2px #e9e1db;
     transform: translateY(-0.7rem);
+}
+
+.container-cursos__card-curso:hover a{
+    color: aliceblue;
+    transform: translateY(-0.2rem);
 }
 
 /****************************
