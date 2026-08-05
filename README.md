@@ -16,10 +16,9 @@ Integrantes:
 
 ## ¿Cómo levantar con Docker-compose?
 
-Descargá el archivo levantar_proyecto.sh y ejecutá el siguiente comando.
 
 ```bash
-./levantar_proyecto.sh
+docker compose up -d --build
 ```
 
 
