@@ -16,6 +16,12 @@ Integrantes:
 
 ## ¿Cómo levantar con Docker-compose?
 
+deberás crear archivos .env tanto en el *Backend* como en el *Frontend*:
+
+```bash
+mkdir .env
+```
+depúes correr el siguiente comando:
 
 ```bash
 docker compose up -d --build
