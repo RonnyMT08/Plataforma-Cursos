@@ -26,9 +26,3 @@ depúes correr el siguiente comando:
 ```bash
 docker compose up -d --build
 ```
-
-
-## ¿Credenciales necesarias?
-
-> proximamente estará disponible...
-
