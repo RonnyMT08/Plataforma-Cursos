@@ -652,5 +652,37 @@ path {
     border-radius: 0.5rem;
 }
 
+/****************************
+LOGIN
+****************************/
+.conteiner-login {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.conteiner-login__content {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.conteiner-login__content-div {
+    background-color: #a55511;
+}
+
+#login-title{
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+
+
 
 

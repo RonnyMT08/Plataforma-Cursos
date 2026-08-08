@@ -13,7 +13,10 @@ def register(app):
     def fundamentos():
         return render_template('fundamentos.html')
 
-    
     @app.route("/modelo")
     def modelo():
         return render_template('modelo.html')
+
+    @app.route("/login")
+    def login():
+        return render_template('login.html')
