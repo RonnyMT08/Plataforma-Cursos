@@ -656,23 +656,30 @@ path {
 LOGIN
 ****************************/
 .conteiner-login {
-    background-color: red;
+    background-image: url('/static/images/fondo_inicio.jpg');
+    background-size: auto;
+    background-position: center;
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100vh;
 }
 
+.conteiner-login form {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+}
+
 .conteiner-login__content {
-    background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 60%;
 }
 
 .conteiner-login__content-div {
-    background-color: #a55511;
+    background-color: #a5561136;
 }
 
 #login-title{
@@ -682,6 +689,15 @@ LOGIN
     font-size: 2rem;
 }
 
+#login-emoji{
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: center;
+}
 
 
 
